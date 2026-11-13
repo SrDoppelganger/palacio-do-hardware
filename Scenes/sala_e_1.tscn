@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://wholkngbrvw6"]
+[gd_scene format=3 uid="uid://wholkngbrvw6"]
 
 [ext_resource type="Script" uid="uid://dctmmyvmvyhyu" path="res://Scripts/sala_e_1.gd" id="1_ccymm"]
 [ext_resource type="Texture2D" uid="uid://1ni5f36dg7dc" path="res://assets/web-memories-1x.png" id="2_4x8vr"]
@@ -11,13 +11,14 @@
 [ext_resource type="Texture2D" uid="uid://pobdgcu0lq5m" path="res://assets/quadro_grande.png" id="9_jjmmt"]
 [ext_resource type="Texture2D" uid="uid://cujvlw020dc2t" path="res://assets/Lucid V1.2/SVG/Shadow/Pause.svg" id="10_jhlwr"]
 [ext_resource type="PackedScene" uid="uid://clhwy4s25q58h" path="res://Scenes/mute_button.tscn" id="11_jhlwr"]
+[ext_resource type="PackedScene" uid="uid://bcypcan63k1to" path="res://Scenes/adapted_scenes/adapt.tscn" id="12_sjxtn"]
 
-[node name="salaE1" type="Node2D"]
+[node name="salaE1" type="Node2D" unique_id=1440806903]
 script = ExtResource("1_ccymm")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1346464527]
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1077009330]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -25,12 +26,12 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_4x8vr")
 
-[node name="quadro" type="Sprite2D" parent="CanvasLayer"]
+[node name="quadro" type="Sprite2D" parent="CanvasLayer" unique_id=771641586]
 position = Vector2(595.5, 228)
 scale = Vector2(0.973941, 0.973684)
 texture = ExtResource("9_jjmmt")
 
-[node name="continuar" type="TextureButton" parent="CanvasLayer"]
+[node name="continuar" type="TextureButton" parent="CanvasLayer" unique_id=1224191863]
 anchors_preset = -1
 anchor_top = 0.837
 anchor_bottom = 0.837
@@ -40,7 +41,7 @@ offset_bottom = 82.624
 texture_normal = ExtResource("3_bsevs")
 texture_hover = ExtResource("4_bsevs")
 
-[node name="voltar" type="TextureButton" parent="CanvasLayer"]
+[node name="voltar" type="TextureButton" parent="CanvasLayer" unique_id=2145603151]
 anchors_preset = -1
 anchor_left = 1.0
 anchor_top = 0.846
@@ -54,7 +55,7 @@ grow_horizontal = 0
 texture_normal = ExtResource("5_bsevs")
 texture_hover = ExtResource("6_w6rf5")
 
-[node name="video" type="VideoStreamPlayer" parent="CanvasLayer"]
+[node name="video" type="VideoStreamPlayer" parent="CanvasLayer" unique_id=632316922]
 anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.381
@@ -70,7 +71,7 @@ autoplay = true
 paused = true
 expand = true
 
-[node name="Button" type="TextureButton" parent="CanvasLayer"]
+[node name="Button" type="TextureButton" parent="CanvasLayer" unique_id=399492113]
 anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.659
@@ -85,7 +86,7 @@ texture_normal = ExtResource("9_42hb7")
 texture_pressed = ExtResource("10_jhlwr")
 stretch_mode = 0
 
-[node name="Mute_Button" parent="CanvasLayer" instance=ExtResource("11_jhlwr")]
+[node name="Mute_Button" parent="CanvasLayer" unique_id=103983080 instance=ExtResource("11_jhlwr")]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -94,6 +95,8 @@ offset_top = 20.0
 offset_right = -22.0
 offset_bottom = 76.0
 grow_horizontal = 0
+
+[node name="Adapt" parent="." unique_id=38215414 instance=ExtResource("12_sjxtn")]
 
 [connection signal="mouse_entered" from="CanvasLayer/continuar" to="." method="_on_continuar_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/continuar" to="." method="_on_continuar_mouse_exited"]
@@ -104,3 +107,5 @@ grow_horizontal = 0
 [connection signal="mouse_entered" from="CanvasLayer/Button" to="." method="_on_button_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/Button" to="." method="_on_button_mouse_exited"]
 [connection signal="toggled" from="CanvasLayer/Button" to="." method="_on_button_toggled"]
+[connection signal="A_signal" from="Adapt" to="." method="_on_continuar_pressed"]
+[connection signal="D_signal" from="Adapt" to="." method="_on_voltar_pressed"]

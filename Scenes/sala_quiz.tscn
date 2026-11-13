@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://ct7kjnypgd42h"]
+[gd_scene format=3 uid="uid://ct7kjnypgd42h"]
 
 [ext_resource type="Script" uid="uid://d2gak36byqqkt" path="res://Scripts/sala_quiz.gd" id="1_i4d8p"]
 [ext_resource type="Texture2D" uid="uid://1ni5f36dg7dc" path="res://assets/web-memories-1x.png" id="2_1xcge"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://denhr8frqw10n" path="res://assets/NPCs/king_idle.png" id="4_gqov5"]
 [ext_resource type="Texture2D" uid="uid://c8m6jrx8d5m4w" path="res://assets/Lucid V1.2/SVG/Shadow/Down-Arrow.svg" id="5_1xcge"]
 [ext_resource type="PackedScene" uid="uid://clhwy4s25q58h" path="res://Scenes/mute_button.tscn" id="6_wuahj"]
+[ext_resource type="PackedScene" uid="uid://bcypcan63k1to" path="res://Scenes/adapted_scenes/adapt.tscn" id="7_gqov5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gaby1"]
 atlas = ExtResource("3_wuahj")
@@ -79,12 +80,12 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1xcge"]
 size = Vector2(356, 418)
 
-[node name="salaQuiz" type="Node2D"]
+[node name="salaQuiz" type="Node2D" unique_id=881690068]
 script = ExtResource("1_i4d8p")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=671141790]
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1451734929]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -92,19 +93,19 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_1xcge")
 
-[node name="king" type="AnimatedSprite2D" parent="CanvasLayer"]
+[node name="king" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=1010885461]
 position = Vector2(575, 334)
 sprite_frames = SubResource("SpriteFrames_f85lx")
 autoplay = "default"
 frame_progress = 0.391842
 
-[node name="Area2D" type="Area2D" parent="CanvasLayer/king"]
+[node name="Area2D" type="Area2D" parent="CanvasLayer/king" unique_id=202888112]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/king/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/king/Area2D" unique_id=2082894507]
 position = Vector2(-2, 1)
 shape = SubResource("RectangleShape2D_1xcge")
 
-[node name="voltar" type="TextureButton" parent="CanvasLayer"]
+[node name="voltar" type="TextureButton" parent="CanvasLayer" unique_id=744808215]
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -119,11 +120,13 @@ grow_vertical = 0
 texture_normal = ExtResource("5_1xcge")
 stretch_mode = 0
 
-[node name="Mute_Button" parent="CanvasLayer" instance=ExtResource("6_wuahj")]
+[node name="Mute_Button" parent="CanvasLayer" unique_id=1786031484 instance=ExtResource("6_wuahj")]
 offset_left = 1074.0
 offset_top = 20.0
 offset_right = 1130.0
 offset_bottom = 76.0
+
+[node name="Adapt" parent="." unique_id=38215414 instance=ExtResource("7_gqov5")]
 
 [connection signal="input_event" from="CanvasLayer/king/Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="CanvasLayer/king/Area2D" to="." method="_on_area_2d_mouse_entered"]
@@ -131,3 +134,5 @@ offset_bottom = 76.0
 [connection signal="mouse_entered" from="CanvasLayer/voltar" to="." method="_on_voltar_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/voltar" to="." method="_on_voltar_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/voltar" to="." method="_on_voltar_pressed"]
+[connection signal="S_signal" from="Adapt" to="." method="_on_voltar_pressed"]
+[connection signal="W_signal" from="Adapt" to="." method="_on_adapt_w_signal"]

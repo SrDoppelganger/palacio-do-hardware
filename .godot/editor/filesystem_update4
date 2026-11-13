@@ -2,3 +2,15 @@ res://Scenes/sala_principal.tscn
 res://Scripts/sala_principal.gd
 res://Scenes/adapted_scenes/adapt.tscn
 res://Scripts/adapt_script.gd
+res://Scenes/sala_d_2.tscn
+res://Scenes/sala_d_1.tscn
+res://Scenes/sala_e_1.tscn
+res://Scenes/sala_e_2.tscn
+res://Scenes/sala_quiz.tscn
+res://Scripts/sala_quiz.gd
+res://Scripts/sala_d_1.gd
+res://Scripts/sala_d_2.gd
+res://Scripts/sala_e_1.gd
+res://Scripts/sala_e_2.gd
+res://Scenes/global.tscn
+res://global.gd

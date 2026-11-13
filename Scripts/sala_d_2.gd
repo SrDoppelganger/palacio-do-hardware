@@ -14,9 +14,11 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func _on_continuar_pressed() -> void:
+	Global.play_steps();
 	get_tree().change_scene_to_file("res://Scenes/sala_principal.tscn");
 
 func _on_voltar_pressed() -> void:
+	Global.play_steps();
 	get_tree().change_scene_to_file("res://Scenes/sala_d_1.tscn");
 
 # ============================================================================================== #

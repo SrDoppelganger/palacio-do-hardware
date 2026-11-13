@@ -1,6 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://dqq77amxbfc8f"]
+[gd_scene format=3 uid="uid://dqq77amxbfc8f"]
 
 [ext_resource type="Script" uid="uid://dt5ppc15lbc6g" path="res://global.gd" id="1_koean"]
+[ext_resource type="AudioStream" uid="uid://b2tsw0pqd86nr" path="res://assets/audios/steps.mp3" id="2_o8ivi"]
 
-[node name="global" type="Node"]
+[node name="global" type="Node" unique_id=11047171]
 script = ExtResource("1_koean")
+
+[node name="steps" type="AudioStreamPlayer2D" parent="." unique_id=1251442201]
+stream = ExtResource("2_o8ivi")
+
+[node name="steps_left" type="AudioStreamPlayer2D" parent="." unique_id=1958900997]
+stream = ExtResource("2_o8ivi")
+
+[node name="steps_right" type="AudioStreamPlayer2D" parent="." unique_id=384172295]
+stream = ExtResource("2_o8ivi")

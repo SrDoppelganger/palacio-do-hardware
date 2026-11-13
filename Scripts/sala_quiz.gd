@@ -10,6 +10,7 @@ func _ready() -> void:
 
 func _on_voltar_pressed() -> void:
 	#add som de "aceite" aqui
+	Global.play_steps();
 	get_tree().change_scene_to_file("res://Scenes/sala_principal.tscn");
 func _on_voltar_mouse_entered() -> void:
 	Global.change_to_hand();
@@ -28,3 +29,7 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 	if event is InputEventMouseButton:
 		if event.pressed:
 			get_tree().change_scene_to_file("res://Scenes/quiz.tscn");
+
+
+func _on_adapt_w_signal() -> void:
+	get_tree().change_scene_to_file("res://Scenes/quiz.tscn");

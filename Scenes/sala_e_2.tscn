@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://xtlj7osanapq"]
+[gd_scene format=3 uid="uid://xtlj7osanapq"]
 
 [ext_resource type="Script" uid="uid://dpf2f5j24hucu" path="res://Scripts/sala_e_2.gd" id="1_8iquw"]
 [ext_resource type="Texture2D" uid="uid://1ni5f36dg7dc" path="res://assets/web-memories-1x.png" id="2_sjp7c"]
@@ -12,13 +12,14 @@
 [ext_resource type="VideoStream" uid="uid://bxgcg8vflip3j" path="res://Cópia-de-Running-cycle.ogv" id="9_tmpwv"]
 [ext_resource type="VideoStream" uid="uid://dy15e8w8wiq8n" path="res://assets/animacoes/WhatsApp-Video-2025-11-26-at-10.16.46.ogv" id="10_tmpwv"]
 [ext_resource type="AudioStream" uid="uid://bd5lywni5a6sp" path="res://assets/audios/sala 1.ogg" id="12_8plj6"]
+[ext_resource type="PackedScene" uid="uid://bcypcan63k1to" path="res://Scenes/adapted_scenes/adapt.tscn" id="13_xo4jl"]
 
-[node name="salaE2" type="Node2D"]
+[node name="salaE2" type="Node2D" unique_id=1656947692]
 script = ExtResource("1_8iquw")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=182028121]
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=2087235986]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -26,7 +27,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_sjp7c")
 
-[node name="salaE1" type="TextureButton" parent="CanvasLayer"]
+[node name="salaE1" type="TextureButton" parent="CanvasLayer" unique_id=2106618841]
 anchors_preset = -1
 anchor_left = 1.0
 anchor_top = 0.877
@@ -40,12 +41,12 @@ grow_horizontal = 0
 texture_normal = ExtResource("5_sjp7c")
 texture_hover = ExtResource("6_xmbx1")
 
-[node name="pilar2" type="Sprite2D" parent="CanvasLayer"]
+[node name="pilar2" type="Sprite2D" parent="CanvasLayer" unique_id=671416217]
 position = Vector2(581, 493)
 scale = Vector2(1.3125, 1.23828)
 texture = ExtResource("7_jgq17")
 
-[node name="music" type="TextureButton" parent="CanvasLayer/pilar2"]
+[node name="music" type="TextureButton" parent="CanvasLayer/pilar2" unique_id=2078341432]
 offset_left = -86.0952
 offset_top = -171.205
 offset_right = 453.905
@@ -54,12 +55,12 @@ scale = Vector2(0.3, 0.3)
 toggle_mode = true
 texture_normal = ExtResource("6_tmpwv")
 
-[node name="quadro1" type="Sprite2D" parent="CanvasLayer"]
+[node name="quadro1" type="Sprite2D" parent="CanvasLayer" unique_id=1145520026]
 position = Vector2(246, 268)
 scale = Vector2(0.686137, 0.682941)
 texture = ExtResource("8_6oh3s")
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CanvasLayer/quadro1"]
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CanvasLayer/quadro1" unique_id=929163184]
 offset_left = -123.882
 offset_top = -125.926
 offset_right = 436.118
@@ -69,12 +70,12 @@ stream = ExtResource("8_6xvro")
 autoplay = true
 loop = true
 
-[node name="quadro2" type="Sprite2D" parent="CanvasLayer"]
+[node name="quadro2" type="Sprite2D" parent="CanvasLayer" unique_id=2028089951]
 position = Vector2(575, 142)
 scale = Vector2(0.698209, 0.710882)
 texture = ExtResource("8_6oh3s")
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CanvasLayer/quadro2"]
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CanvasLayer/quadro2" unique_id=61960619]
 offset_left = -117.443
 offset_top = -130.823
 offset_right = 2362.56
@@ -84,12 +85,12 @@ stream = ExtResource("9_tmpwv")
 autoplay = true
 loop = true
 
-[node name="quadro3" type="Sprite2D" parent="CanvasLayer"]
+[node name="quadro3" type="Sprite2D" parent="CanvasLayer" unique_id=202712829]
 position = Vector2(915, 275)
 scale = Vector2(0.698209, 0.710882)
 texture = ExtResource("8_6oh3s")
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CanvasLayer/quadro3"]
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CanvasLayer/quadro3" unique_id=304901891]
 offset_left = -120.308
 offset_top = -135.044
 offset_right = 331.692
@@ -99,18 +100,21 @@ stream = ExtResource("10_tmpwv")
 autoplay = true
 loop = true
 
-[node name="Mute_Button" parent="CanvasLayer" instance=ExtResource("7_hlinm")]
+[node name="Mute_Button" parent="CanvasLayer" unique_id=1281340602 instance=ExtResource("7_hlinm")]
 offset_left = 1074.0
 offset_top = 20.0
 offset_right = 1130.0
 offset_bottom = 76.0
 
-[node name="audio" type="Node" parent="."]
+[node name="audio" type="Node" parent="." unique_id=1435349278]
 
-[node name="audio" type="AudioStreamPlayer" parent="audio"]
+[node name="audio" type="AudioStreamPlayer" parent="audio" unique_id=979234051]
 stream = ExtResource("12_8plj6")
+
+[node name="Adapt" parent="." unique_id=38215414 instance=ExtResource("13_xo4jl")]
 
 [connection signal="pressed" from="CanvasLayer/salaE1" to="." method="_on_sala_e_1_pressed"]
 [connection signal="mouse_entered" from="CanvasLayer/pilar2/music" to="." method="_on_music_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/pilar2/music" to="." method="_on_music_mouse_exited"]
 [connection signal="toggled" from="CanvasLayer/pilar2/music" to="." method="_on_music_toggled"]
+[connection signal="D_signal" from="Adapt" to="." method="_on_sala_e_1_pressed"]
