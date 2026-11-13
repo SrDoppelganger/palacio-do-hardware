@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c073e02so22mb"]
+[gd_scene format=3 uid="uid://c073e02so22mb"]
 
 [ext_resource type="Script" uid="uid://dy1pcykpuun32" path="res://Scripts/sala_principal.gd" id="1_4mn28"]
 [ext_resource type="Texture2D" uid="uid://1ni5f36dg7dc" path="res://assets/web-memories-1x.png" id="2_jauba"]
@@ -9,13 +9,14 @@
 [ext_resource type="Texture2D" uid="uid://yxqcxy5sagb7" path="res://assets/right_door1.png" id="5_8edo5"]
 [ext_resource type="Texture2D" uid="uid://b5o701s3sc4d5" path="res://assets/right_door2.png" id="6_x2gtq"]
 [ext_resource type="PackedScene" uid="uid://clhwy4s25q58h" path="res://Scenes/mute_button.tscn" id="9_x2gtq"]
+[ext_resource type="PackedScene" uid="uid://bcypcan63k1to" path="res://Scenes/adapted_scenes/adapt.tscn" id="10_0pi73"]
 
-[node name="salaPrincipal" type="Node2D"]
+[node name="salaPrincipal" type="Node2D" unique_id=1312826803]
 script = ExtResource("1_4mn28")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=666954225]
 
-[node name="fundo" type="TextureRect" parent="CanvasLayer"]
+[node name="fundo" type="TextureRect" parent="CanvasLayer" unique_id=598265859]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -23,7 +24,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_jauba")
 
-[node name="porta_esq" type="TextureButton" parent="CanvasLayer"]
+[node name="porta_esq" type="TextureButton" parent="CanvasLayer" unique_id=2097550277]
 anchors_preset = -1
 anchor_top = 0.611
 anchor_bottom = 0.611
@@ -34,7 +35,7 @@ offset_bottom = 221.072
 texture_normal = ExtResource("3_1ngob")
 texture_hover = ExtResource("4_3urle")
 
-[node name="porta_dir" type="TextureButton" parent="CanvasLayer"]
+[node name="porta_dir" type="TextureButton" parent="CanvasLayer" unique_id=1781811140]
 anchors_preset = -1
 anchor_left = 1.0
 anchor_top = 0.634
@@ -48,7 +49,7 @@ grow_horizontal = 0
 texture_normal = ExtResource("5_8edo5")
 texture_hover = ExtResource("6_x2gtq")
 
-[node name="porta_quiz" type="TextureButton" parent="CanvasLayer"]
+[node name="porta_quiz" type="TextureButton" parent="CanvasLayer" unique_id=1847850408]
 anchors_preset = -1
 anchor_left = 0.502
 anchor_right = 0.502
@@ -59,7 +60,7 @@ offset_bottom = 503.0
 texture_normal = ExtResource("4_1ngob")
 texture_hover = ExtResource("5_3urle")
 
-[node name="Mute_Button" parent="CanvasLayer" instance=ExtResource("9_x2gtq")]
+[node name="Mute_Button" parent="CanvasLayer" unique_id=150086474 instance=ExtResource("9_x2gtq")]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -68,6 +69,8 @@ offset_top = 20.0
 offset_right = -22.0
 offset_bottom = 76.0
 grow_horizontal = 0
+
+[node name="Adapt" parent="." unique_id=38215414 instance=ExtResource("10_0pi73")]
 
 [connection signal="mouse_entered" from="CanvasLayer/porta_esq" to="." method="_on_porta_esq_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/porta_esq" to="." method="_on_porta_esq_mouse_exited"]
@@ -78,3 +81,6 @@ grow_horizontal = 0
 [connection signal="mouse_entered" from="CanvasLayer/porta_quiz" to="." method="_on_porta_quiz_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/porta_quiz" to="." method="_on_porta_quiz_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/porta_quiz" to="." method="_on_porta_quiz_pressed"]
+[connection signal="A_signal" from="Adapt" to="." method="_on_porta_esq_pressed"]
+[connection signal="D_signal" from="Adapt" to="." method="_on_porta_dir_pressed"]
+[connection signal="W_signal" from="Adapt" to="." method="_on_porta_quiz_pressed"]

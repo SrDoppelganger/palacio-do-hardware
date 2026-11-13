@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bcypcan63k1to"]
+
+[ext_resource type="Script" uid="uid://kcis4bneeonu" path="res://Scripts/adapt_script.gd" id="1_xv8vd"]
+
+[node name="Adapt" type="Node" unique_id=38215414]
+script = ExtResource("1_xv8vd")

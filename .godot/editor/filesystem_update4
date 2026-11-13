@@ -1,0 +1,4 @@
+res://Scenes/sala_principal.tscn
+res://Scripts/sala_principal.gd
+res://Scenes/adapted_scenes/adapt.tscn
+res://Scripts/adapt_script.gd
