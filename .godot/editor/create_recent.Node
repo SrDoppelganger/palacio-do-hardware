@@ -1,2 +1,6 @@
+AudioStreamPlayer
+AnimationPlayer
+ColorRect
+CanvasLayer
 AudioStreamPlayer2D
 AudioListener2D

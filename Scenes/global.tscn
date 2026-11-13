@@ -6,11 +6,11 @@
 [node name="global" type="Node" unique_id=11047171]
 script = ExtResource("1_koean")
 
-[node name="steps" type="AudioStreamPlayer2D" parent="." unique_id=1251442201]
+[node name="steps" type="AudioStreamPlayer" parent="." unique_id=1709040083]
 stream = ExtResource("2_o8ivi")
 
-[node name="steps_left" type="AudioStreamPlayer2D" parent="." unique_id=1958900997]
+[node name="steps_left" type="AudioStreamPlayer" parent="." unique_id=1313820166]
 stream = ExtResource("2_o8ivi")
 
-[node name="steps_right" type="AudioStreamPlayer2D" parent="." unique_id=384172295]
+[node name="steps_right" type="AudioStreamPlayer" parent="." unique_id=1363055528]
 stream = ExtResource("2_o8ivi")

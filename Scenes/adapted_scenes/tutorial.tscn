@@ -1,0 +1,185 @@
+[gd_scene format=3 uid="uid://4oxv3we31bxp"]
+
+[ext_resource type="Script" uid="uid://k1fabtoq37jf" path="res://Scripts/tutorial_script.gd" id="1_0k0dm"]
+[ext_resource type="AudioStream" uid="uid://sq8hmc0artoy" path="res://assets/audios/intro/intro_TTS.mp3" id="1_2ci6l"]
+[ext_resource type="AudioStream" uid="uid://c6kpyloqq6vc3" path="res://assets/audios/intro/outro_TTS.mp3" id="2_0k0dm"]
+[ext_resource type="AudioStream" uid="uid://bp8cnj3r8qfc7" path="res://assets/audios/intro/controls_TTS.mp3" id="3_gm5dw"]
+[ext_resource type="AudioStream" uid="uid://b2tfjcdetr2nf" path="res://assets/audios/intro/confirm_TTS.mp3" id="4_ghna5"]
+[ext_resource type="AudioStream" uid="uid://c05cs483hq1uh" path="res://assets/audios/accept.mp3" id="6_gm5dw"]
+
+[sub_resource type="Animation" id="Animation_gm5dw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("intro:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("controls:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("interact:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("confirm:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("outro:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_bxla7"]
+resource_name = "controls"
+length = 26.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("controls:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 16.133333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("interact:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(16.166666, 16.666666, 24.9, 25.366667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("confirm:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(16.7, 24.866667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_ghna5"]
+resource_name = "intro"
+length = 12.433333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("intro:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 12),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_5cku3"]
+resource_name = "outro"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("outro:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335, 6.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bxla7"]
+_data = {
+&"RESET": SubResource("Animation_gm5dw"),
+&"controls": SubResource("Animation_bxla7"),
+&"intro": SubResource("Animation_ghna5"),
+&"outro": SubResource("Animation_5cku3")
+}
+
+[node name="Tutorial" type="Node2D" unique_id=1540234580]
+script = ExtResource("1_0k0dm")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=284554978]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=477398869]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="intro" type="AudioStreamPlayer" parent="." unique_id=224568316]
+stream = ExtResource("1_2ci6l")
+
+[node name="outro" type="AudioStreamPlayer" parent="." unique_id=984231794]
+stream = ExtResource("2_0k0dm")
+
+[node name="controls" type="AudioStreamPlayer" parent="." unique_id=495618466]
+stream = ExtResource("3_gm5dw")
+
+[node name="confirm" type="AudioStreamPlayer" parent="." unique_id=2125323519]
+stream = ExtResource("4_ghna5")
+
+[node name="interact" type="AudioStreamPlayer" parent="." unique_id=1879930058]
+stream = ExtResource("6_gm5dw")
+
+[node name="animation" type="AnimationPlayer" parent="." unique_id=429940062]
+libraries/ = SubResource("AnimationLibrary_bxla7")
+autoplay = &"intro"
+
+[connection signal="animation_finished" from="animation" to="." method="_on_animation_animation_finished"]

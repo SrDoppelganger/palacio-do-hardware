@@ -1,8 +1,6 @@
 extends Node2D
 
 @onready var audio: AudioStreamPlayer = $audio/audio
-@onready var steps_left: AudioStreamPlayer2D = $steps_left
-@onready var steps_right: AudioStreamPlayer2D = $steps_right
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

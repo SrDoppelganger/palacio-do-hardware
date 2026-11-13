@@ -1,6 +1,8 @@
 #todo adicionar cursores aqui
 extends  Node
-@onready var steps: AudioStreamPlayer2D = $steps
+@onready var steps: AudioStreamPlayer = $steps
+@onready var steps_left: AudioStreamPlayer = $steps_left
+@onready var steps_right: AudioStreamPlayer = $steps_right
 
 var pointer = preload("res://assets/cursores/Hands/Hand1.png");
 var clicker = preload("res://assets/cursores/Arrows/Arrow2.png");
