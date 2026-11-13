@@ -1,16 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://bjj57h8qwdl30"]
+[gd_scene format=3 uid="uid://bjj57h8qwdl30"]
 
 [ext_resource type="Script" uid="uid://bofedwy68c25e" path="res://Scripts/title.gd" id="1_q2qps"]
 [ext_resource type="Texture2D" uid="uid://cmr7y42kp2320" path="res://assets/PALCIO-PALCIO-Multimdia.png" id="2_ekrfg"]
 [ext_resource type="Texture2D" uid="uid://crm2nvflcdnjd" path="res://assets/BG/title_bg.jpg" id="2_q2qps"]
 [ext_resource type="FontFile" uid="uid://d2thbakf2hu5y" path="res://assets/fontes/pixel_operator/PixelOperator8.ttf" id="3_fp2oq"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" unique_id=169983493]
 script = ExtResource("1_q2qps")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=165656248]
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=41230351]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -18,7 +18,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_q2qps")
 
-[node name="TextureRect2" type="TextureRect" parent="CanvasLayer"]
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer" unique_id=837917414]
 anchors_preset = 10
 anchor_right = 1.0
 offset_left = 308.0
@@ -29,7 +29,7 @@ grow_horizontal = 2
 texture = ExtResource("2_ekrfg")
 expand_mode = 1
 
-[node name="Jogar" type="Button" parent="CanvasLayer"]
+[node name="Jogar" type="Button" parent="CanvasLayer" unique_id=1615434119]
 custom_minimum_size = Vector2(300, 0)
 anchors_preset = 7
 anchor_left = 0.5
@@ -46,26 +46,6 @@ theme_override_fonts/font = ExtResource("3_fp2oq")
 theme_override_font_sizes/font_size = 48
 text = "JOGAR"
 
-[node name="Sobre" type="Button" parent="CanvasLayer"]
-custom_minimum_size = Vector2(300, 0)
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -105.0
-offset_top = -134.0
-offset_right = 113.0
-offset_bottom = -59.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_fonts/font = ExtResource("3_fp2oq")
-theme_override_font_sizes/font_size = 48
-text = "SOBRE"
-
 [connection signal="mouse_entered" from="CanvasLayer/Jogar" to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/Jogar" to="." method="_on_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/Jogar" to="." method="_on_jogar_pressed"]
-[connection signal="mouse_entered" from="CanvasLayer/Sobre" to="." method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="CanvasLayer/Sobre" to="." method="_on_mouse_exited"]
-[connection signal="pressed" from="CanvasLayer/Sobre" to="." method="_on_sobre_pressed"]
