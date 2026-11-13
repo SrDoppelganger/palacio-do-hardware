@@ -1,0 +1,116 @@
+[gd_scene load_steps=13 format=3 uid="uid://xtlj7osanapq"]
+
+[ext_resource type="Script" uid="uid://dpf2f5j24hucu" path="res://Scripts/sala_e_2.gd" id="1_8iquw"]
+[ext_resource type="Texture2D" uid="uid://1ni5f36dg7dc" path="res://assets/web-memories-1x.png" id="2_sjp7c"]
+[ext_resource type="Texture2D" uid="uid://yxqcxy5sagb7" path="res://assets/right_door1.png" id="5_sjp7c"]
+[ext_resource type="Texture2D" uid="uid://cc877gkgnybrh" path="res://assets/audio_icon.png" id="6_tmpwv"]
+[ext_resource type="Texture2D" uid="uid://b5o701s3sc4d5" path="res://assets/right_door2.png" id="6_xmbx1"]
+[ext_resource type="PackedScene" uid="uid://clhwy4s25q58h" path="res://Scenes/mute_button.tscn" id="7_hlinm"]
+[ext_resource type="Texture2D" uid="uid://7a2tu1areig6" path="res://assets/pilar.png" id="7_jgq17"]
+[ext_resource type="Texture2D" uid="uid://cg8o35xdor2ii" path="res://assets/quadro_peq.png" id="8_6oh3s"]
+[ext_resource type="VideoStream" uid="uid://bual58t026qk2" path="res://assets/animacoes/Animação-2.ogv" id="8_6xvro"]
+[ext_resource type="VideoStream" uid="uid://bxgcg8vflip3j" path="res://Cópia-de-Running-cycle.ogv" id="9_tmpwv"]
+[ext_resource type="VideoStream" uid="uid://dy15e8w8wiq8n" path="res://assets/animacoes/WhatsApp-Video-2025-11-26-at-10.16.46.ogv" id="10_tmpwv"]
+[ext_resource type="AudioStream" uid="uid://bd5lywni5a6sp" path="res://assets/audios/sala 1.ogg" id="12_8plj6"]
+
+[node name="salaE2" type="Node2D"]
+script = ExtResource("1_8iquw")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_sjp7c")
+
+[node name="salaE1" type="TextureButton" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.877
+anchor_right = 1.0
+anchor_bottom = 0.877
+offset_left = -203.0
+offset_top = -282.296
+offset_right = -11.0
+offset_bottom = 59.704
+grow_horizontal = 0
+texture_normal = ExtResource("5_sjp7c")
+texture_hover = ExtResource("6_xmbx1")
+
+[node name="pilar2" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(581, 493)
+scale = Vector2(1.3125, 1.23828)
+texture = ExtResource("7_jgq17")
+
+[node name="music" type="TextureButton" parent="CanvasLayer/pilar2"]
+offset_left = -86.0952
+offset_top = -171.205
+offset_right = 453.905
+offset_bottom = 328.795
+scale = Vector2(0.3, 0.3)
+toggle_mode = true
+texture_normal = ExtResource("6_tmpwv")
+
+[node name="quadro1" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(246, 268)
+scale = Vector2(0.686137, 0.682941)
+texture = ExtResource("8_6oh3s")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CanvasLayer/quadro1"]
+offset_left = -123.882
+offset_top = -125.926
+offset_right = 436.118
+offset_bottom = 434.074
+scale = Vector2(0.45, 0.5)
+stream = ExtResource("8_6xvro")
+autoplay = true
+loop = true
+
+[node name="quadro2" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(575, 142)
+scale = Vector2(0.698209, 0.710882)
+texture = ExtResource("8_6oh3s")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CanvasLayer/quadro2"]
+offset_left = -117.443
+offset_top = -130.823
+offset_right = 2362.56
+offset_bottom = 3377.18
+scale = Vector2(0.1, 0.08)
+stream = ExtResource("9_tmpwv")
+autoplay = true
+loop = true
+
+[node name="quadro3" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(915, 275)
+scale = Vector2(0.698209, 0.710882)
+texture = ExtResource("8_6oh3s")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CanvasLayer/quadro3"]
+offset_left = -120.308
+offset_top = -135.044
+offset_right = 331.692
+offset_bottom = 504.956
+scale = Vector2(0.55, 0.45)
+stream = ExtResource("10_tmpwv")
+autoplay = true
+loop = true
+
+[node name="Mute_Button" parent="CanvasLayer" instance=ExtResource("7_hlinm")]
+offset_left = 1074.0
+offset_top = 20.0
+offset_right = 1130.0
+offset_bottom = 76.0
+
+[node name="audio" type="Node" parent="."]
+
+[node name="audio" type="AudioStreamPlayer" parent="audio"]
+stream = ExtResource("12_8plj6")
+
+[connection signal="pressed" from="CanvasLayer/salaE1" to="." method="_on_sala_e_1_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/pilar2/music" to="." method="_on_music_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/pilar2/music" to="." method="_on_music_mouse_exited"]
+[connection signal="toggled" from="CanvasLayer/pilar2/music" to="." method="_on_music_toggled"]
