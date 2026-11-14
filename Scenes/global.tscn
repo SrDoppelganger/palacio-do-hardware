@@ -3,14 +3,23 @@
 [ext_resource type="Script" uid="uid://dt5ppc15lbc6g" path="res://global.gd" id="1_koean"]
 [ext_resource type="AudioStream" uid="uid://b2tsw0pqd86nr" path="res://assets/audios/steps.mp3" id="2_o8ivi"]
 
-[node name="global" type="Node" unique_id=11047171]
+[node name="global" type="Node2D" unique_id=1445171420]
 script = ExtResource("1_koean")
 
 [node name="steps" type="AudioStreamPlayer" parent="." unique_id=1709040083]
 stream = ExtResource("2_o8ivi")
 
-[node name="steps_left" type="AudioStreamPlayer" parent="." unique_id=1313820166]
+[node name="steps_left" type="AudioStreamPlayer2D" parent="." unique_id=1277441372]
+position = Vector2(301, 260)
 stream = ExtResource("2_o8ivi")
+max_distance = 500.0
+panning_strength = 5.65
 
-[node name="steps_right" type="AudioStreamPlayer" parent="." unique_id=1363055528]
+[node name="steps_right" type="AudioStreamPlayer2D" parent="." unique_id=205396507]
+position = Vector2(897, 259)
 stream = ExtResource("2_o8ivi")
+max_distance = 500.0
+panning_strength = 4.9
+
+[node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=1200212075]
+position = Vector2(581, 296)

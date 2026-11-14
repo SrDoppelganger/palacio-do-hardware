@@ -287,9 +287,10 @@ offset_bottom = 90.625
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
 text = "Bem-vindo ao palácio do Hardware, esta experiência utiliza um esquema de controles adaptado.
-Para ouvir os controles aperte a tecla [ESPAÇO]
-Se você já sabe os controles, aperte a tecla W"
+Para ouvir os controles aperte a tecla [color=yellow]ESPAÇO[/color]
+Se você já sabe os controles, aperte a tecla [color=yellow]W[/color]"
 horizontal_alignment = 1
 
 [node name="outro_text" type="RichTextLabel" parent="CanvasLayer/textboxes" unique_id=2124192642]
@@ -306,7 +307,8 @@ offset_bottom = 30.3125
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 32
-text = "Aproveite sua visita ao Palácio do Hardware ;)"
+bbcode_enabled = true
+text = "[wave freq=2.0]Aproveite sua visita ao Palácio do Hardware ;)"
 horizontal_alignment = 1
 
 [node name="controls_text" type="RichTextLabel" parent="CanvasLayer/textboxes" unique_id=83196941]
@@ -323,10 +325,11 @@ offset_bottom = 132.3125
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 32
-text = "Esta experiência utiliza as teclas W A S D e ESPAÇO.
-use W e S para escolher os itens acima e embaixo de você
-e as teclas A e D para escolher as portas na esquerda e na direita.
-Você também pode usar a tecla ESPAÇO para interagir com objetos na sala"
+bbcode_enabled = true
+text = "Esta experiência utiliza as teclas [color=yellow]W A S D[/color] e [color=yellow]ESPAÇO[/color].
+use [color=yellow]W[/color] e [color=yellow]S[/color] para escolher os itens acima e embaixo de você
+e as teclas [color=yellow]A[/color] e [color=yellow]D[/color] para escolher as portas na esquerda e na direita.
+Você também pode usar a tecla [color=yellow]ESPAÇO  [/color] para interagir com objetos na sala"
 horizontal_alignment = 1
 
 [node name="intro" type="AudioStreamPlayer" parent="." unique_id=224568316]

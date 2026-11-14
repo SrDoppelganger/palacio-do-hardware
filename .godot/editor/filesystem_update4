@@ -2,3 +2,7 @@ res://Scripts/tutorial_script.gd
 res://Scenes/adapted_scenes/tutorial.tscn
 res://Scenes/title.tscn
 res://Scripts/title.gd
+res://Scenes/global.tscn
+res://global.gd
+res://Scripts/sala_principal.gd
+res://Scenes/sala_principal.tscn
