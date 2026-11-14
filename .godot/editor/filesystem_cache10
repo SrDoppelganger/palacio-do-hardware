@@ -1,7 +1,7 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1794619120
+::res://::1794620000
 default_bus_layout.tres::AudioBusLayout::8330841150811803347::1794595535::0::1::::<><><>0<>0<><>::
-global.gd::GDScript::8555719101213202340::1794619120::0::1::::<>Node<><>0<>0<><>::
+global.gd::GDScript::8555719101213202340::1794620000::0::1::::<>Node<><>0<>0<><>::
 icon.svg::CompressedTexture2D::1091392325990161585::1794595535::1794595535::1::::<><><>0<>0<>f755fcb541a470bb62eaa8419fc49445<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://assets/::1794595535
 animaking1.jpg::CompressedTexture2D::7405059449979127361::1794595535::1794595535::1::::<><><>0<>0<>ebf4655cdf10c67115110a789178c31e<>res://.godot/imported/animaking1.jpg-16a6361e7b946b3aa179e035f052a237.ctex::
@@ -29,8 +29,9 @@ web-memories-1x.png::CompressedTexture2D::1852286462434952104::1794595535::17945
 Animação-2.ogv::VideoStreamTheora::3790920780986369335::1794595535::0::1::::<><><>0<>0<><>::
 Cópia-de-Walking-Cycle-Recuperado.ogv::VideoStreamTheora::2112381060309444898::1794595535::0::1::::<><><>0<>0<><>::
 WhatsApp-Video-2025-11-26-at-10.16.46.ogv::VideoStreamTheora::8899298541741602415::1794595535::0::1::::<><><>0<>0<><>::
-::res://assets/audios/::1794619852
+::res://assets/audios/::1794620291
 accept.mp3::AudioStreamMP3::6589648944672531783::1794595535::1794595535::1::::<><><>0<>0<>9c69adf207284028c42418f55826d9a8<>res://.godot/imported/accept.mp3-a5180ffd522bbf38187282e7324a2082.mp3str::
+cue.mp3::AudioStreamMP3::7364858552376051232::1794620260::1794620294::1::::<><><>0<>0<>4ef4ba63657aa8ed484bdc526ce15c5b<>res://.godot/imported/cue.mp3-5e9e4ae6e290ecc801e1361b47008a5c.mp3str::
 denied.mp3::AudioStreamMP3::1641000950004264237::1794595535::1794595535::1::::<><><>0<>0<>408c2f05066a84bc3261ec4ebfd477dd<>res://.godot/imported/denied.mp3-a946e6b005a24df6e5259869220b8f90.mp3str::
 Intro.ogg::AudioStreamOggVorbis::3222168326752565886::1794595535::1794595535::1::::<><><>0<>0<>b6d57c7e001972222775ec197c09436f<>res://.godot/imported/Intro.ogg-ed37dec923cfebd860c0e31c25c7c48b.oggvorbisstr::
 main_menu_TTS.mp3::AudioStreamMP3::9082326186417585885::1794619829::1794619854::1::::<><><>0<>0<>ac9406331373160af88c885445fc2427<>res://.godot/imported/main_menu_TTS.mp3-9d6e88d84df3cd8e8e961aae310c4352.mp3str::
@@ -340,8 +341,8 @@ king_idle.png::CompressedTexture2D::7467311455669214295::1794595535::1794595535:
 ::res://assets/videos/::1794595535
 Kamen-Rider-Ryuki-Opening-Theme-Song-2002.ogv::VideoStreamTheora::8911597485261454537::1794595535::0::1::::<><><>0<>0<><>::
 VID-20251203-WA0036 (1).ogv::VideoStreamTheora::6521186846443252189::1794595535::0::1::::<><><>0<>0<><>::
-::res://Scenes/::1794619470
-global.tscn::PackedScene::8317313702110465287::1794619133::0::1::::<><><>0<>0<><>::uid://dt5ppc15lbc6g::::res://global.gd<>uid://b2tsw0pqd86nr::::res://assets/audios/steps.mp3
+::res://Scenes/::1794620000
+global.tscn::PackedScene::8317313702110465287::1794620000::0::1::::<><><>0<>0<><>::uid://dt5ppc15lbc6g::::res://global.gd<>uid://b2tsw0pqd86nr::::res://assets/audios/steps.mp3
 mute_button.gd::GDScript::7231454304923755418::1794595535::0::1::::<>TextureButton<><>0<>0<><>::
 mute_button.tscn::PackedScene::5560749476828701345::1794595535::0::1::::<><><>0<>0<><>::uid://dba784h2qc05k::::res://Scenes/mute_button.gd<>uid://ic88l4p76ys::::res://assets/Lucid V1.2/SVG/Shadow/Speaker-0.svg<>uid://do0dad1x21dhh::::res://assets/Lucid V1.2/SVG/Shadow/Speaker-Crossed.svg
 quiz.gdshader::Shader::8601516550364314748::1794595535::0::1::::<><><>0<>0<><>::
@@ -356,7 +357,7 @@ sala_principal.tscn::PackedScene::6595331121071117117::1794619253::0::1::::<><><
 sala_quiz.tscn::PackedScene::6173113447280098537::1794602389::0::1::::<><><>0<>0<><>::uid://d2gak36byqqkt::::res://Scripts/sala_quiz.gd<>uid://1ni5f36dg7dc::::res://assets/web-memories-1x.png<>uid://cgkqayev3aop1::::res://assets/NPCs/king_active.png<>uid://denhr8frqw10n::::res://assets/NPCs/king_idle.png<>uid://c8m6jrx8d5m4w::::res://assets/Lucid V1.2/SVG/Shadow/Down-Arrow.svg<>uid://clhwy4s25q58h::::res://Scenes/mute_button.tscn<>uid://bcypcan63k1to::::res://Scenes/adapted_scenes/adapt.tscn
 soundtrack.tscn::PackedScene::8675645779088271037::1794595535::0::1::::<><><>0<>0<><>::uid://c7361qhfp0rsk::::res://Scripts/soundtrack.gd<>uid://1y0pmc32rahl::::res://assets/audios/Museu.ogg<>uid://c05cs483hq1uh::::res://assets/audios/accept.mp3<>uid://xm6btb157jmr::::res://assets/audios/denied.mp3
 textbox.tscn::PackedScene::3826853877343783604::1794595535::0::1::::<><><>0<>0<><>::uid://cqfpxpj3wuit::::res://Scripts/textbox.gd<>uid://bpn2unib34sxp::::res://assets/fontes/pixel_operator/PixelOperator.ttf
-title.tscn::PackedScene::3038578750808375605::1794612186::0::1::::<><><>0<>0<><>::uid://bofedwy68c25e::::res://Scripts/title.gd<>uid://cmr7y42kp2320::::res://assets/PALCIO-PALCIO-Multimdia.png<>uid://crm2nvflcdnjd::::res://assets/BG/title_bg.jpg<>uid://d2thbakf2hu5y::::res://assets/fontes/pixel_operator/PixelOperator8.ttf
+title.tscn::PackedScene::3038578750808375605::1794619887::0::1::::<><><>0<>0<><>::uid://bofedwy68c25e::::res://Scripts/title.gd<>uid://cmr7y42kp2320::::res://assets/PALCIO-PALCIO-Multimdia.png<>uid://crm2nvflcdnjd::::res://assets/BG/title_bg.jpg<>uid://d2thbakf2hu5y::::res://assets/fontes/pixel_operator/PixelOperator8.ttf<>uid://d2nst5woyg6wf::::res://assets/audios/main_menu_TTS.mp3
 ::res://Scenes/adapted_scenes/::1794619730
 adapt.tscn::PackedScene::2577257785074703916::1794619730::0::1::::<><><>0<>0<><>::uid://kcis4bneeonu::::res://Scripts/adapt_script.gd
 tutorial.tscn::PackedScene::2065813251425091633::1794618709::0::1::::<><><>0<>0<><>::uid://k1fabtoq37jf::::res://Scripts/tutorial_script.gd<>uid://sq8hmc0artoy::::res://assets/audios/intro/intro_TTS.mp3<>uid://c6kpyloqq6vc3::::res://assets/audios/intro/outro_TTS.mp3<>uid://bp8cnj3r8qfc7::::res://assets/audios/intro/controls_TTS.mp3<>uid://b2tfjcdetr2nf::::res://assets/audios/intro/confirm_TTS.mp3<>uid://c05cs483hq1uh::::res://assets/audios/accept.mp3
