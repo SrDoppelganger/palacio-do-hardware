@@ -8,12 +8,12 @@ func _ready() -> void:
 
 func _on_voltar_pressed() -> void:
 	#add som de "aceite"
-	Global.play_steps();
+	Global.play_steps_left();
 	get_tree().change_scene_to_file("res://Scenes/sala_principal.tscn");
 
 func _on_sala_e_1_pressed() -> void:
 	#add som de "aceite"
-	Global.play_steps();
+	Global.play_steps_right();
 	get_tree().change_scene_to_file("res://Scenes/sala_e_1.tscn");
 	
 	

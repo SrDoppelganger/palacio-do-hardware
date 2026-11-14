@@ -18,7 +18,7 @@ func _on_continuar_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/sala_principal.tscn");
 
 func _on_voltar_pressed() -> void:
-	Global.play_steps();
+	Global.play_steps_left();
 	get_tree().change_scene_to_file("res://Scenes/sala_d_1.tscn");
 
 # ============================================================================================== #

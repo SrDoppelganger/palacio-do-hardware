@@ -6,3 +6,11 @@ res://Scenes/global.tscn
 res://global.gd
 res://Scripts/sala_principal.gd
 res://Scenes/sala_principal.tscn
+res://Scenes/sala_e_1.tscn
+res://Scripts/sala_e_1.gd
+res://Scenes/sala_e_2.tscn
+res://Scripts/sala_e_2.gd
+res://Scenes/sala_d_1.tscn
+res://Scripts/sala_d_1.gd
+res://Scenes/sala_d_2.tscn
+res://Scripts/sala_d_2.gd
