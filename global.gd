@@ -14,10 +14,16 @@ func change_to_arrow():
 	Input.set_custom_mouse_cursor(clicker);
 
 func play_steps():
+	steps_left.stop()
+	steps_right.stop()
 	steps.play()
 
 func play_steps_left():
+	steps.stop()
+	steps_right.stop()
 	steps_left.play()
 	
 func play_steps_right():
+	steps.stop()
+	steps_left.stop()
 	steps_right.play()

@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cmr7y42kp2320" path="res://assets/PALCIO-PALCIO-Multimdia.png" id="2_ekrfg"]
 [ext_resource type="Texture2D" uid="uid://crm2nvflcdnjd" path="res://assets/BG/title_bg.jpg" id="2_q2qps"]
 [ext_resource type="FontFile" uid="uid://d2thbakf2hu5y" path="res://assets/fontes/pixel_operator/PixelOperator8.ttf" id="3_fp2oq"]
+[ext_resource type="AudioStream" uid="uid://d2nst5woyg6wf" path="res://assets/audios/main_menu_TTS.mp3" id="5_yosvi"]
 
 [node name="Node2D" type="Node2D" unique_id=169983493]
 script = ExtResource("1_q2qps")
@@ -45,6 +46,10 @@ grow_vertical = 0
 theme_override_fonts/font = ExtResource("3_fp2oq")
 theme_override_font_sizes/font_size = 48
 text = "JOGAR"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1049048901]
+stream = ExtResource("5_yosvi")
+autoplay = true
 
 [connection signal="mouse_entered" from="CanvasLayer/Jogar" to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/Jogar" to="." method="_on_mouse_exited"]

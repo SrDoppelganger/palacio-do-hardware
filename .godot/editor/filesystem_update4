@@ -14,3 +14,5 @@ res://Scenes/sala_d_1.tscn
 res://Scripts/sala_d_1.gd
 res://Scenes/sala_d_2.tscn
 res://Scripts/sala_d_2.gd
+res://Scenes/adapted_scenes/adapt.tscn
+res://Scripts/adapt_script.gd
