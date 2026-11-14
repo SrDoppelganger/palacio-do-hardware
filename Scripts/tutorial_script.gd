@@ -1,6 +1,7 @@
 extends Node2D
 @onready var animation: AnimationPlayer = $animation
 @onready var intro: AudioStreamPlayer = $intro
+@onready var outro: AudioStreamPlayer = $outro
 
 
 # Called when the node enters the scene tree for the first time.
@@ -10,6 +11,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("UP"):
 		intro.playing = false
+		outro.playing =  false
 		animation.play("outro")
 	if Input.is_action_just_pressed("CONFIRM"):
 		intro.playing = false
