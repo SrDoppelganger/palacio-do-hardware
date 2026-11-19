@@ -12,9 +12,10 @@
 [ext_resource type="Texture2D" uid="uid://cujvlw020dc2t" path="res://assets/Lucid V1.2/SVG/Shadow/Pause.svg" id="10_jhlwr"]
 [ext_resource type="PackedScene" uid="uid://clhwy4s25q58h" path="res://Scenes/mute_button.tscn" id="11_jhlwr"]
 [ext_resource type="PackedScene" uid="uid://bcypcan63k1to" path="res://Scenes/adapted_scenes/adapt.tscn" id="12_sjxtn"]
+[ext_resource type="AudioStream" uid="uid://dc6ue54crlyke" path="res://assets/audios/cue.mp3" id="13_u45et"]
 
-[sub_resource type="Animation" id="Animation_sjxtn"]
-resource_name = "enter"
+[sub_resource type="Animation" id="Animation_u45et"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -22,10 +23,10 @@ tracks/0/path = NodePath("Surround/left_door:playing")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": []
+"values": [true]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -34,14 +35,43 @@ tracks/1/path = NodePath("Surround/right_door:playing")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": []
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_sjxtn"]
+resource_name = "enter"
+length = 2.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Surround/left_door:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.4666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Surround/right_door:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.65, 2.0333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_u45et"]
 _data = {
+&"RESET": SubResource("Animation_u45et"),
 &"enter": SubResource("Animation_sjxtn")
 }
 
@@ -136,11 +166,20 @@ animation_name = "enter"
 libraries/ = SubResource("AnimationLibrary_u45et")
 autoplay = &"enter"
 
+[node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=99076206]
+position = Vector2(608, 640)
+
 [node name="Surround" type="Node" parent="." unique_id=894748184]
 
 [node name="left_door" type="AudioStreamPlayer2D" parent="Surround" unique_id=774367099]
+position = Vector2(8, 329)
+stream = ExtResource("13_u45et")
+max_distance = 800.0
 
 [node name="right_door" type="AudioStreamPlayer2D" parent="Surround" unique_id=114202389]
+position = Vector2(1144, 327)
+stream = ExtResource("13_u45et")
+max_distance = 800.0
 
 [connection signal="mouse_entered" from="CanvasLayer/continuar" to="." method="_on_continuar_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/continuar" to="." method="_on_continuar_mouse_exited"]

@@ -11,7 +11,69 @@
 [ext_resource type="VideoStream" uid="uid://bual58t026qk2" path="res://assets/animacoes/Animação-2.ogv" id="8_6xvro"]
 [ext_resource type="VideoStream" uid="uid://dy15e8w8wiq8n" path="res://assets/animacoes/WhatsApp-Video-2025-11-26-at-10.16.46.ogv" id="10_tmpwv"]
 [ext_resource type="AudioStream" uid="uid://bd5lywni5a6sp" path="res://assets/audios/sala 1.ogg" id="12_8plj6"]
+[ext_resource type="AudioStream" uid="uid://dc6ue54crlyke" path="res://assets/audios/cue.mp3" id="13_vt6tj"]
 [ext_resource type="PackedScene" uid="uid://bcypcan63k1to" path="res://Scenes/adapted_scenes/adapt.tscn" id="13_xo4jl"]
+
+[sub_resource type="Animation" id="Animation_o3iad"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Surround/object1:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Surround/right_door:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_luwqe"]
+resource_name = "enter"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Surround/right_door:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.63, 1.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Surround/object1:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.2333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mbmkw"]
+_data = {
+&"RESET": SubResource("Animation_o3iad"),
+&"enter": SubResource("Animation_luwqe")
+}
 
 [node name="salaE2" type="Node2D" unique_id=1656947692]
 script = ExtResource("1_8iquw")
@@ -100,7 +162,27 @@ offset_bottom = 76.0
 [node name="audio" type="AudioStreamPlayer" parent="audio" unique_id=979234051]
 stream = ExtResource("12_8plj6")
 
-[node name="Adapt" parent="." unique_id=38215414 instance=ExtResource("13_xo4jl")]
+[node name="Adapt" parent="." unique_id=38215414 node_paths=PackedStringArray("animation") instance=ExtResource("13_xo4jl")]
+animation = NodePath("../AnimationPlayer")
+animation_name = "enter"
+
+[node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=1291050055]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=228847527]
+libraries/ = SubResource("AnimationLibrary_mbmkw")
+autoplay = &"enter"
+
+[node name="Surround" type="Node" parent="." unique_id=1605753200]
+
+[node name="object1" type="AudioStreamPlayer2D" parent="Surround" unique_id=581068999]
+position = Vector2(573, 391)
+stream = ExtResource("13_vt6tj")
+max_distance = 800.0
+
+[node name="right_door" type="AudioStreamPlayer2D" parent="Surround" unique_id=527593083]
+position = Vector2(1143, 342)
+stream = ExtResource("13_vt6tj")
+max_distance = 800.0
 
 [connection signal="pressed" from="CanvasLayer/salaE1" to="." method="_on_sala_e_1_pressed"]
 [connection signal="mouse_entered" from="CanvasLayer/pilar2/music" to="." method="_on_music_mouse_entered"]
