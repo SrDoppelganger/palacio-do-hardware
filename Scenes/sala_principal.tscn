@@ -17,7 +17,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("left_door:playing")
+tracks/0/path = NodePath("surround/left_door:playing")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -29,7 +29,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("quiz_door:playing")
+tracks/1/path = NodePath("surround/quiz_door:playing")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -41,7 +41,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("right_door:playing")
+tracks/2/path = NodePath("surround/right_door:playing")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -57,7 +57,7 @@ length = 2.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("left_door:playing")
+tracks/0/path = NodePath("surround/left_door:playing")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -69,7 +69,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("quiz_door:playing")
+tracks/1/path = NodePath("surround/quiz_door:playing")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -81,7 +81,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("right_door:playing")
+tracks/2/path = NodePath("surround/right_door:playing")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -156,32 +156,36 @@ offset_right = -22.0
 offset_bottom = 76.0
 grow_horizontal = 0
 
-[node name="Adapt" parent="." unique_id=38215414 instance=ExtResource("10_0pi73")]
+[node name="Adapt" parent="." unique_id=38215414 node_paths=PackedStringArray("animation") instance=ExtResource("10_0pi73")]
+animation = NodePath("../AnimationPlayer")
+animation_name = "enter"
 
 [node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=1536920408]
 position = Vector2(580, 637)
 
-[node name="left_door" type="AudioStreamPlayer2D" parent="." unique_id=1184828374]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1281421335]
+libraries/ = SubResource("AnimationLibrary_aqvpy")
+autoplay = &"enter"
+
+[node name="surround" type="Node" parent="." unique_id=1409302]
+
+[node name="left_door" type="AudioStreamPlayer2D" parent="surround" unique_id=1184828374]
 position = Vector2(17, 332)
 stream = ExtResource("11_s4ebt")
 max_distance = 800.0
 panning_strength = 3.0
 
-[node name="quiz_door" type="AudioStreamPlayer2D" parent="." unique_id=1657390409]
+[node name="quiz_door" type="AudioStreamPlayer2D" parent="surround" unique_id=1657390409]
 position = Vector2(587, 304)
 stream = ExtResource("11_s4ebt")
 max_distance = 400.0
 panning_strength = 3.0
 
-[node name="right_door" type="AudioStreamPlayer2D" parent="." unique_id=1234742921]
+[node name="right_door" type="AudioStreamPlayer2D" parent="surround" unique_id=1234742921]
 position = Vector2(1138, 331)
 stream = ExtResource("11_s4ebt")
 max_distance = 800.0
 panning_strength = 3.0
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1281421335]
-libraries/ = SubResource("AnimationLibrary_aqvpy")
-autoplay = &"enter"
 
 [connection signal="mouse_entered" from="CanvasLayer/porta_esq" to="." method="_on_porta_esq_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/porta_esq" to="." method="_on_porta_esq_mouse_exited"]

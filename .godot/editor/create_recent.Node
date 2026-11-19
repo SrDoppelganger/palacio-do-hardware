@@ -1,9 +1,9 @@
 AnimationPlayer
 AudioStreamPlayer2D
+Node
 AudioListener2D
 AudioStreamPlayer
 Node2D
 RichTextLabel
-Node
 ColorRect
 CanvasLayer

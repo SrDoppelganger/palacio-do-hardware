@@ -1,5 +1,8 @@
 extends Node
 
+@export var animation: AnimationPlayer;
+@export var animation_name: String;
+
 signal W_signal;
 signal A_signal;
 signal S_signal;
@@ -19,3 +22,5 @@ func _process(_delta: float) -> void:
 		A_signal.emit();
 	if Input.is_action_just_pressed("RIGHT"):
 		D_signal.emit();
+	if Input.is_action_just_pressed("LISTEN"):
+		animation.play(animation_name);
