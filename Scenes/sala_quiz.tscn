@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c8m6jrx8d5m4w" path="res://assets/Lucid V1.2/SVG/Shadow/Down-Arrow.svg" id="5_1xcge"]
 [ext_resource type="PackedScene" uid="uid://clhwy4s25q58h" path="res://Scenes/mute_button.tscn" id="6_wuahj"]
 [ext_resource type="PackedScene" uid="uid://bcypcan63k1to" path="res://Scenes/adapted_scenes/adapt.tscn" id="7_gqov5"]
+[ext_resource type="AudioStream" uid="uid://dc6ue54crlyke" path="res://assets/audios/cue.mp3" id="8_gaby1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gaby1"]
 atlas = ExtResource("3_wuahj")
@@ -80,6 +81,67 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1xcge"]
 size = Vector2(356, 418)
 
+[sub_resource type="Animation" id="Animation_gaby1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Surround/boss:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Surround/back_door:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_6drv0"]
+resource_name = "enter"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Surround/boss:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.3333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Surround/back_door:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.62, 1.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mhj6q"]
+_data = {
+&"RESET": SubResource("Animation_gaby1"),
+&"enter": SubResource("Animation_6drv0")
+}
+
 [node name="salaQuiz" type="Node2D" unique_id=881690068]
 script = ExtResource("1_i4d8p")
 
@@ -126,7 +188,28 @@ offset_top = 20.0
 offset_right = 1130.0
 offset_bottom = 76.0
 
-[node name="Adapt" parent="." unique_id=38215414 instance=ExtResource("7_gqov5")]
+[node name="Adapt" parent="." unique_id=38215414 node_paths=PackedStringArray("animation") instance=ExtResource("7_gqov5")]
+animation = NodePath("../AnimationPlayer")
+animation_name = "enter"
+
+[node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=943312585]
+position = Vector2(587, 385)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=855207778]
+libraries/ = SubResource("AnimationLibrary_mhj6q")
+autoplay = &"enter"
+
+[node name="Surround" type="Node" parent="." unique_id=1771281868]
+
+[node name="boss" type="AudioStreamPlayer2D" parent="Surround" unique_id=1622042319]
+position = Vector2(572, 126)
+stream = ExtResource("8_gaby1")
+max_distance = 450.0
+
+[node name="back_door" type="AudioStreamPlayer2D" parent="Surround" unique_id=1181233327]
+position = Vector2(593, 636)
+stream = ExtResource("8_gaby1")
+max_distance = 450.0
 
 [connection signal="input_event" from="CanvasLayer/king/Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="CanvasLayer/king/Area2D" to="." method="_on_area_2d_mouse_entered"]

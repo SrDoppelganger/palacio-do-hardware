@@ -1,2 +1,2 @@
-res://Scenes/sala_e_1.tscn
-res://Scenes/sala_e_2.tscn
+res://Scripts/quiz.gd
+res://Scenes/quiz.tscn

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://4oxv3we31bxp"]
 
 [ext_resource type="Script" uid="uid://k1fabtoq37jf" path="res://Scripts/tutorial_script.gd" id="1_0k0dm"]
-[ext_resource type="AudioStream" uid="uid://sq8hmc0artoy" path="res://assets/audios/intro/intro_TTS.mp3" id="1_2ci6l"]
 [ext_resource type="AudioStream" uid="uid://c6kpyloqq6vc3" path="res://assets/audios/intro/outro_TTS.mp3" id="2_0k0dm"]
+[ext_resource type="AudioStream" uid="uid://bjhkk06knscbq" path="res://assets/audios/intro/intro(new).mp3" id="2_gm5dw"]
 [ext_resource type="AudioStream" uid="uid://bp8cnj3r8qfc7" path="res://assets/audios/intro/controls_TTS.mp3" id="3_gm5dw"]
 [ext_resource type="AudioStream" uid="uid://b2tfjcdetr2nf" path="res://assets/audios/intro/confirm_TTS.mp3" id="4_ghna5"]
 [ext_resource type="AudioStream" uid="uid://c05cs483hq1uh" path="res://assets/audios/accept.mp3" id="6_gm5dw"]
@@ -333,7 +333,7 @@ Você também pode usar a tecla [color=yellow]ESPAÇO  [/color] para interagir c
 horizontal_alignment = 1
 
 [node name="intro" type="AudioStreamPlayer" parent="." unique_id=224568316]
-stream = ExtResource("1_2ci6l")
+stream = ExtResource("2_gm5dw")
 
 [node name="outro" type="AudioStreamPlayer" parent="." unique_id=984231794]
 stream = ExtResource("2_0k0dm")

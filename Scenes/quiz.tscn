@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bjje7c0h8tbq7"]
+[gd_scene format=3 uid="uid://bjje7c0h8tbq7"]
 
 [ext_resource type="Script" uid="uid://bvwmn3obju3kr" path="res://Scripts/quiz.gd" id="1_bu0r6"]
 [ext_resource type="Shader" uid="uid://dusvyrl0r2h53" path="res://Scenes/quiz.gdshader" id="1_fdxuh"]
@@ -12,6 +12,7 @@
 [ext_resource type="FontFile" uid="uid://bhdjb8m4y2n63" path="res://assets/fontes/pixel_operator/PixelOperatorHB.ttf" id="8_5od8v"]
 [ext_resource type="Texture2D" uid="uid://cngq3okm4cpvp" path="res://assets/Lucid V1.2/SVG/Shadow/Exit.svg" id="9_jmbid"]
 [ext_resource type="PackedScene" uid="uid://clhwy4s25q58h" path="res://Scenes/mute_button.tscn" id="11_tfh67"]
+[ext_resource type="PackedScene" uid="uid://bcypcan63k1to" path="res://Scenes/adapted_scenes/adapt.tscn" id="13_0iro7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pkwmv"]
 shader = ExtResource("1_fdxuh")
@@ -104,15 +105,15 @@ Button/styles/hover = SubResource("StyleBoxTexture_28c1y")
 Button/styles/normal = SubResource("StyleBoxTexture_0iro7")
 Button/styles/pressed = SubResource("StyleBoxTexture_esplf")
 
-[node name="Quiz" type="Node2D"]
+[node name="Quiz" type="Node2D" unique_id=786928891]
 script = ExtResource("1_bu0r6")
 
-[node name="BD" type="Node" parent="."]
+[node name="BD" type="Node" parent="." unique_id=2125835166]
 script = ExtResource("2_e6bo8")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1843356206]
 
-[node name="Background" type="TextureRect" parent="CanvasLayer"]
+[node name="Background" type="TextureRect" parent="CanvasLayer" unique_id=1481633246]
 texture_repeat = 2
 material = SubResource("ShaderMaterial_pkwmv")
 anchors_preset = 15
@@ -122,14 +123,14 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_fdxuh")
 
-[node name="king" type="Sprite2D" parent="CanvasLayer/Background"]
+[node name="king" type="Sprite2D" parent="CanvasLayer/Background" unique_id=522428417]
 position = Vector2(184, 630)
 scale = Vector2(2, 2)
 texture = ExtResource("1_i183w")
 region_enabled = true
 region_rect = Rect2(0, 0, 397, 418)
 
-[node name="question" type="Panel" parent="CanvasLayer/Background"]
+[node name="question" type="Panel" parent="CanvasLayer/Background" unique_id=506007966]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -144,7 +145,7 @@ grow_horizontal = 0
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_i183w")
 
-[node name="pergunta" type="Label" parent="CanvasLayer/Background/question"]
+[node name="pergunta" type="Label" parent="CanvasLayer/Background/question" unique_id=1654070506]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -161,7 +162,7 @@ theme_override_font_sizes/font_size = 32
 text = "LOREM IPSUM"
 autowrap_mode = 2
 
-[node name="alternativas" type="Label" parent="CanvasLayer/Background/question"]
+[node name="alternativas" type="Label" parent="CanvasLayer/Background/question" unique_id=1645399230]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -181,7 +182,7 @@ C)
 D)"
 autowrap_mode = 2
 
-[node name="A" type="Button" parent="CanvasLayer/Background"]
+[node name="A" type="Button" parent="CanvasLayer/Background" unique_id=30777701]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -197,7 +198,7 @@ grow_vertical = 0
 theme = SubResource("Theme_5od8v")
 text = "A"
 
-[node name="B" type="Button" parent="CanvasLayer/Background"]
+[node name="B" type="Button" parent="CanvasLayer/Background" unique_id=4155376]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -213,7 +214,7 @@ grow_vertical = 0
 theme = SubResource("Theme_tfh67")
 text = "B"
 
-[node name="C" type="Button" parent="CanvasLayer/Background"]
+[node name="C" type="Button" parent="CanvasLayer/Background" unique_id=2054823508]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -229,7 +230,7 @@ grow_vertical = 0
 theme = SubResource("Theme_qbquq")
 text = "C"
 
-[node name="D" type="Button" parent="CanvasLayer/Background"]
+[node name="D" type="Button" parent="CanvasLayer/Background" unique_id=1840719283]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -245,7 +246,7 @@ grow_vertical = 0
 theme = SubResource("Theme_gpq0x")
 text = "D"
 
-[node name="TextureButton" type="TextureButton" parent="CanvasLayer"]
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer" unique_id=1239384440]
 offset_left = 23.0
 offset_top = 30.0
 offset_right = 71.0
@@ -253,11 +254,13 @@ offset_bottom = 86.0
 texture_normal = ExtResource("9_jmbid")
 texture_pressed = ExtResource("9_jmbid")
 
-[node name="Mute_Button" parent="CanvasLayer" instance=ExtResource("11_tfh67")]
+[node name="Mute_Button" parent="CanvasLayer" unique_id=978261984 instance=ExtResource("11_tfh67")]
 offset_left = 19.0
 offset_top = 112.0
 offset_right = 75.0
 offset_bottom = 168.0
+
+[node name="Adapt" parent="." unique_id=38215414 instance=ExtResource("13_0iro7")]
 
 [connection signal="mouse_entered" from="CanvasLayer/Background/A" to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/Background/A" to="." method="_on_mouse_exited"]
@@ -276,3 +279,7 @@ offset_bottom = 168.0
 [connection signal="pressed" from="CanvasLayer/TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="mouse_entered" from="CanvasLayer/Mute_Button" to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/Mute_Button" to="." method="_on_mouse_exited"]
+[connection signal="A_signal" from="Adapt" to="." method="_on_d_pressed"]
+[connection signal="D_signal" from="Adapt" to="." method="_on_b_pressed"]
+[connection signal="S_signal" from="Adapt" to="." method="_on_c_pressed"]
+[connection signal="W_signal" from="Adapt" to="." method="_on_a_pressed"]

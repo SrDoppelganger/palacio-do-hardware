@@ -239,6 +239,7 @@ animation_name = "enter"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=315108862]
 libraries/ = SubResource("AnimationLibrary_ma0oi")
+autoplay = &"enter"
 
 [node name="Surround" type="Node" parent="." unique_id=614273742]
 

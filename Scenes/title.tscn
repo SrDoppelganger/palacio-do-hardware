@@ -20,6 +20,7 @@ grow_vertical = 2
 texture = ExtResource("2_q2qps")
 
 [node name="TextureRect2" type="TextureRect" parent="CanvasLayer" unique_id=837917414]
+visible = false
 anchors_preset = 10
 anchor_right = 1.0
 offset_left = 308.0
