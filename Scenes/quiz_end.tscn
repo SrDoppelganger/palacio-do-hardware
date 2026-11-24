@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://d3nj6aoahyccb"]
+[gd_scene format=3 uid="uid://d3nj6aoahyccb"]
 
 [ext_resource type="Texture2D" uid="uid://cpvpdtlbe5ahk" path="res://assets/BG/victoryBG.png" id="1_5nawm"]
 [ext_resource type="Script" uid="uid://dn6o7sogyepr0" path="res://Scripts/quiz_end.gd" id="1_43g7a"]
@@ -6,16 +6,17 @@
 [ext_resource type="FontFile" uid="uid://7unj3e3o3sgm" path="res://assets/fontes/pixel_operator/PixelOperator8-Bold.ttf" id="3_jfujm"]
 [ext_resource type="Texture2D" uid="uid://di0athyrg3j2v" path="res://assets/NPCs/KING-WIN.png" id="4_nukf3"]
 [ext_resource type="FontFile" uid="uid://d2thbakf2hu5y" path="res://assets/fontes/pixel_operator/PixelOperator8.ttf" id="5_4crdb"]
+[ext_resource type="PackedScene" uid="uid://bcypcan63k1to" path="res://Scenes/adapted_scenes/adapt.tscn" id="7_17ym6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jfujm"]
 shader = ExtResource("1_sthd7")
 
-[node name="quiz_end" type="Node2D"]
+[node name="quiz_end" type="Node2D" unique_id=417979160]
 script = ExtResource("1_43g7a")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2520585]
 
-[node name="background" type="TextureRect" parent="CanvasLayer"]
+[node name="background" type="TextureRect" parent="CanvasLayer" unique_id=1617575440]
 texture_repeat = 2
 material = SubResource("ShaderMaterial_jfujm")
 anchors_preset = 15
@@ -25,7 +26,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_5nawm")
 
-[node name="Label" type="Label" parent="CanvasLayer"]
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=611981833]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -41,12 +42,12 @@ theme_override_fonts/font = ExtResource("3_jfujm")
 theme_override_font_sizes/font_size = 64
 text = "OBRIGADO POR JOGAR!"
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=551167314]
 position = Vector2(596, 292)
 scale = Vector2(0.77512, 0.77512)
 texture = ExtResource("4_nukf3")
 
-[node name="Button" type="Button" parent="CanvasLayer"]
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=1152120554]
 custom_minimum_size = Vector2(240, 64)
 offset_left = 293.0
 offset_top = 467.0
@@ -56,7 +57,7 @@ theme_override_fonts/font = ExtResource("5_4crdb")
 theme_override_font_sizes/font_size = 40
 text = "JOGAR NOVAMENTE"
 
-[node name="Button2" type="Button" parent="CanvasLayer"]
+[node name="Button2" type="Button" parent="CanvasLayer" unique_id=2055419892]
 custom_minimum_size = Vector2(240, 64)
 offset_left = 298.0
 offset_top = 554.0
@@ -65,6 +66,8 @@ offset_bottom = 618.0
 theme_override_fonts/font = ExtResource("5_4crdb")
 theme_override_font_sizes/font_size = 40
 text = "VOLTAR AO MENU"
+
+[node name="Adapt" parent="." unique_id=38215414 instance=ExtResource("7_17ym6")]
 
 [connection signal="mouse_entered" from="CanvasLayer/Button" to="." method="_on_button_2_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/Button" to="." method="_on_button_2_mouse_exited"]

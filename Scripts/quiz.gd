@@ -23,7 +23,7 @@ func _ready() -> void:
 	changeQuestion();
 	acerto = 0;
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if acerto >= 5:
 		get_tree().change_scene_to_file("res://Scenes/quiz_end.tscn");
 
@@ -51,11 +51,11 @@ func _on_texture_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/sala_quiz.tscn");
 
 
-
+var resp_name: String;
 #BOTÃO A
 func _on_a_pressed() -> void:
-	const name = "a";
-	if checkAnswer(name):
+	resp_name = "a";
+	if checkAnswer(resp_name):
 		acerto += 1;
 		Soundtrack.playAccept();
 	else:
@@ -65,8 +65,8 @@ func _on_a_pressed() -> void:
 
 #BOTÃO B
 func _on_b_pressed() -> void:
-	const name = "b";
-	if checkAnswer(name):
+	resp_name = "b";
+	if checkAnswer(resp_name):
 		acerto += 1;
 		Soundtrack.playAccept();
 	else:
@@ -76,8 +76,8 @@ func _on_b_pressed() -> void:
 
 #BOTÃO C
 func _on_c_pressed() -> void:
-	const name = "c";
-	if checkAnswer(name):
+	resp_name = "c";
+	if checkAnswer(resp_name):
 		acerto += 1;
 		Soundtrack.playAccept();
 	else:
@@ -87,8 +87,8 @@ func _on_c_pressed() -> void:
 
 #BOTÃO D
 func _on_d_pressed() -> void:
-	const name = "d";
-	if checkAnswer(name):
+	resp_name = "d";
+	if checkAnswer(resp_name):
 		acerto += 1;
 		Soundtrack.playAccept();
 	else:

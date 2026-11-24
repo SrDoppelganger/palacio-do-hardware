@@ -4,7 +4,7 @@ extends Node2D
 func _ready() -> void:
 	Soundtrack.playMusic("placeholder");
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("CONFIRM"):
 		get_tree().change_scene_to_file("res://Scenes/adapted_scenes/tutorial.tscn");
 

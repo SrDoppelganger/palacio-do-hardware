@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bjj57h8qwdl30"]
 
 [ext_resource type="Script" uid="uid://bofedwy68c25e" path="res://Scripts/title.gd" id="1_q2qps"]
-[ext_resource type="Texture2D" uid="uid://cmr7y42kp2320" path="res://assets/PALCIO-PALCIO-Multimdia.png" id="2_ekrfg"]
-[ext_resource type="Texture2D" uid="uid://crm2nvflcdnjd" path="res://assets/BG/title_bg.jpg" id="2_q2qps"]
+[ext_resource type="Texture2D" uid="uid://ga4cq67baui8" path="res://assets/cenários/title_PH.jpg" id="2_yosvi"]
 [ext_resource type="FontFile" uid="uid://d2thbakf2hu5y" path="res://assets/fontes/pixel_operator/PixelOperator8.ttf" id="3_fp2oq"]
+[ext_resource type="Texture2D" uid="uid://bx2o80o7j5g7f" path="res://assets/cenários/PALCIODOCONHECIMENTO-PALCIODOCONHECIMENTO-PALCIODO.png" id="3_yosvi"]
 [ext_resource type="AudioStream" uid="uid://d2nst5woyg6wf" path="res://assets/audios/main_menu_TTS.mp3" id="5_yosvi"]
 
 [node name="Node2D" type="Node2D" unique_id=169983493]
@@ -17,18 +17,18 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_q2qps")
+texture = ExtResource("2_yosvi")
+expand_mode = 3
 
 [node name="TextureRect2" type="TextureRect" parent="CanvasLayer" unique_id=837917414]
-visible = false
 anchors_preset = 10
 anchor_right = 1.0
-offset_left = 308.0
-offset_top = -2.0
-offset_right = -272.0
-offset_bottom = 329.0
+offset_left = 286.0
+offset_top = 17.0
+offset_right = -221.41992
+offset_bottom = 390.0
 grow_horizontal = 2
-texture = ExtResource("2_ekrfg")
+texture = ExtResource("3_yosvi")
 expand_mode = 1
 
 [node name="Jogar" type="Button" parent="CanvasLayer" unique_id=1615434119]
@@ -38,10 +38,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -105.0
-offset_top = -237.0
-offset_right = 113.0
-offset_bottom = -162.0
+offset_left = -107.0
+offset_top = -128.0
+offset_right = 193.0
+offset_bottom = -53.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("3_fp2oq")

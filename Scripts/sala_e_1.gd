@@ -1,12 +1,9 @@
 extends Node2D
-@onready var video: VideoStreamPlayer = $CanvasLayer/video
-var playVideo;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	playVideo = false
-
-
+	pass
+	
 func _on_continuar_pressed() -> void:
 	#add som de "aceite"
 	Global.play_steps_left();
@@ -25,15 +22,6 @@ func _on_voltar_mouse_entered() -> void:
 func _on_voltar_mouse_exited() -> void:
 	Global.change_to_arrow();
 
-
-
-func _on_button_toggled(toggled_on: bool) -> void:
-	if toggled_on:
-		Soundtrack.pauseMusic();
-		video.paused = false;
-	else:
-		video.paused = true;
-		Soundtrack.playMusic("placeholder");
 func _on_button_mouse_entered() -> void:
 	Global.change_to_hand();
 func _on_button_mouse_exited() -> void:

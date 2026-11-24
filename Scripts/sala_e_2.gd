@@ -17,8 +17,6 @@ func _on_sala_e_1_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/sala_e_1.tscn");
 	
 	
-
-
 func _on_music_mouse_entered() -> void:
 	Global.change_to_hand();
 
@@ -30,3 +28,10 @@ func _on_music_toggled(toggled_on: bool) -> void:
 		audio.play();
 	if !toggled_on:
 		audio.stop();
+
+
+func _on_sala_e_1_mouse_entered() -> void:
+	Global.change_to_hand();
+
+func _on_sala_e_1_mouse_exited() -> void:
+	Global.change_to_arrow();

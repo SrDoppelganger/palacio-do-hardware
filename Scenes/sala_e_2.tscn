@@ -1,15 +1,12 @@
 [gd_scene format=3 uid="uid://xtlj7osanapq"]
 
 [ext_resource type="Script" uid="uid://dpf2f5j24hucu" path="res://Scripts/sala_e_2.gd" id="1_8iquw"]
-[ext_resource type="Texture2D" uid="uid://1ni5f36dg7dc" path="res://assets/web-memories-1x.png" id="2_sjp7c"]
-[ext_resource type="Texture2D" uid="uid://yxqcxy5sagb7" path="res://assets/right_door1.png" id="5_sjp7c"]
+[ext_resource type="Texture2D" uid="uid://bx00hvrojm0hs" path="res://assets/cenários/Esquerda 2.png" id="2_6xvro"]
 [ext_resource type="Texture2D" uid="uid://cc877gkgnybrh" path="res://assets/audio_icon.png" id="6_tmpwv"]
-[ext_resource type="Texture2D" uid="uid://b5o701s3sc4d5" path="res://assets/right_door2.png" id="6_xmbx1"]
 [ext_resource type="PackedScene" uid="uid://clhwy4s25q58h" path="res://Scenes/mute_button.tscn" id="7_hlinm"]
 [ext_resource type="Texture2D" uid="uid://7a2tu1areig6" path="res://assets/pilar.png" id="7_jgq17"]
 [ext_resource type="Texture2D" uid="uid://cg8o35xdor2ii" path="res://assets/quadro_peq.png" id="8_6oh3s"]
 [ext_resource type="VideoStream" uid="uid://bual58t026qk2" path="res://assets/animacoes/Animação-2.ogv" id="8_6xvro"]
-[ext_resource type="VideoStream" uid="uid://dy15e8w8wiq8n" path="res://assets/animacoes/WhatsApp-Video-2025-11-26-at-10.16.46.ogv" id="10_tmpwv"]
 [ext_resource type="AudioStream" uid="uid://bd5lywni5a6sp" path="res://assets/audios/sala 1.ogg" id="12_8plj6"]
 [ext_resource type="AudioStream" uid="uid://dc6ue54crlyke" path="res://assets/audios/cue.mp3" id="13_vt6tj"]
 [ext_resource type="PackedScene" uid="uid://bcypcan63k1to" path="res://Scenes/adapted_scenes/adapt.tscn" id="13_xo4jl"]
@@ -86,7 +83,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_sjp7c")
+texture = ExtResource("2_6xvro")
 
 [node name="salaE1" type="TextureButton" parent="CanvasLayer" unique_id=2106618841]
 anchors_preset = -1
@@ -99,11 +96,9 @@ offset_top = -282.296
 offset_right = -11.0
 offset_bottom = 59.704
 grow_horizontal = 0
-texture_normal = ExtResource("5_sjp7c")
-texture_hover = ExtResource("6_xmbx1")
 
 [node name="pilar2" type="Sprite2D" parent="CanvasLayer" unique_id=671416217]
-position = Vector2(581, 493)
+position = Vector2(548, 491)
 scale = Vector2(1.3125, 1.23828)
 texture = ExtResource("7_jgq17")
 
@@ -117,7 +112,7 @@ toggle_mode = true
 texture_normal = ExtResource("6_tmpwv")
 
 [node name="quadro1" type="Sprite2D" parent="CanvasLayer" unique_id=1145520026]
-position = Vector2(246, 268)
+position = Vector2(299.00003, 274)
 scale = Vector2(0.686137, 0.682941)
 texture = ExtResource("8_6oh3s")
 
@@ -132,24 +127,9 @@ autoplay = true
 loop = true
 
 [node name="quadro2" type="Sprite2D" parent="CanvasLayer" unique_id=2028089951]
-position = Vector2(575, 142)
+position = Vector2(573, 163)
 scale = Vector2(0.698209, 0.710882)
 texture = ExtResource("8_6oh3s")
-
-[node name="quadro3" type="Sprite2D" parent="CanvasLayer" unique_id=202712829]
-position = Vector2(915, 275)
-scale = Vector2(0.698209, 0.710882)
-texture = ExtResource("8_6oh3s")
-
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CanvasLayer/quadro3" unique_id=304901891]
-offset_left = -120.308
-offset_top = -135.044
-offset_right = 331.692
-offset_bottom = 504.956
-scale = Vector2(0.55, 0.45)
-stream = ExtResource("10_tmpwv")
-autoplay = true
-loop = true
 
 [node name="Mute_Button" parent="CanvasLayer" unique_id=1281340602 instance=ExtResource("7_hlinm")]
 offset_left = 1074.0
@@ -184,6 +164,8 @@ position = Vector2(1143, 342)
 stream = ExtResource("13_vt6tj")
 max_distance = 800.0
 
+[connection signal="mouse_entered" from="CanvasLayer/salaE1" to="." method="_on_sala_e_1_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/salaE1" to="." method="_on_sala_e_1_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/salaE1" to="." method="_on_sala_e_1_pressed"]
 [connection signal="mouse_entered" from="CanvasLayer/pilar2/music" to="." method="_on_music_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/pilar2/music" to="." method="_on_music_mouse_exited"]
