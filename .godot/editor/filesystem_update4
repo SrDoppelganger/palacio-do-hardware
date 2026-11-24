@@ -1,0 +1,4 @@
+res://Scripts/quiz_end.gd
+res://Scenes/quiz_end.tscn
+res://Scenes/adapted_scenes/tutorial.tscn
+res://Scripts/tutorial_script.gd

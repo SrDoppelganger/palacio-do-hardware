@@ -75,3 +75,5 @@ text = "VOLTAR AO MENU"
 [connection signal="mouse_entered" from="CanvasLayer/Button2" to="." method="_on_button_2_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/Button2" to="." method="_on_button_2_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="Interact" from="Adapt" to="." method="_on_button_2_pressed"]
+[connection signal="W_signal" from="Adapt" to="." method="_on_button_pressed"]
