@@ -1,9 +1,10 @@
+CanvasLayer
+Sprite2D
+Node
+RichTextLabel
+ColorRect
 AnimationPlayer
 AudioStreamPlayer2D
 AudioListener2D
-Node
 AudioStreamPlayer
 Node2D
-RichTextLabel
-ColorRect
-CanvasLayer

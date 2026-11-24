@@ -1,4 +1,5 @@
-res://Scripts/quiz_end.gd
-res://Scenes/quiz_end.tscn
-res://Scenes/adapted_scenes/tutorial.tscn
-res://Scripts/tutorial_script.gd
+res://Scenes/sala_e_1.tscn
+res://Scripts/diag_script.gd
+res://Scenes/sala_e_2.tscn
+res://Scenes/sala_d_1.tscn
+res://Scenes/sala_d_2.tscn

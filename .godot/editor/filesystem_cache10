@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1795527320
+::res://::1795538821
 default_bus_layout.tres::AudioBusLayout::8330841150811803347::1794595535::0::1::::<><><>0<>0<><>::
 global.gd::GDScript::8555719101213202340::1794620000::0::1::::<>Node<><>0<>0<><>::
 icon.svg::CompressedTexture2D::1091392325990161585::1794595535::1794595535::1::::<><><>0<>0<>f755fcb541a470bb62eaa8419fc49445<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
@@ -292,21 +292,23 @@ Up-Arrow.svg::CompressedTexture2D::1160004419396979186::1794595535::1794595535::
 Upload.svg::CompressedTexture2D::4668031808727823817::1794595535::1794595535::1::::<><><>0<>0<>7364b51eee5f672ca4e815741814b93c<>res://.godot/imported/Upload.svg-f9f5240bd4f4ecf206eb3076f60c2ef7.ctex::
 ::res://assets/musicas/::1794595535
 placeholder_BGM.ogg::AudioStreamOggVorbis::7132879075796381585::1794595535::1794595535::1::::<><><>0<>0<>808e494fa4978bfa1ca0589d682a04d4<>res://.godot/imported/placeholder_BGM.ogg-998ef47eaf1eda5e2cf9cf6782e8b891.oggvorbisstr::
-::res://assets/NPCs/::1794595535
+::res://assets/NPCs/::1795539064
+char1_PH.png::CompressedTexture2D::1356673824392728900::1795539011::1795539067::1::::<><><>0<>0<>3fa8a4819533aace2b375437ce12b94d<>res://.godot/imported/char1_PH.png-515223cdab24f7e0d3ce840969de0cd6.ctex::
+char2_PH.png::CompressedTexture2D::5706624646428528202::1795539064::1795539066::1::::<><><>0<>0<>89b7236abf3527403b74a7ee1924f377<>res://.godot/imported/char2_PH.png-219246002a0b5789457d948e7e2a1f8f.ctex::
 KING-WIN.png::CompressedTexture2D::7772416579639538735::1794595535::1794595535::1::::<><><>0<>0<>8b91cf2c84c07b1eeb7cd3a93d0e0e4b<>res://.godot/imported/KING-WIN.png-ba05b2b27bac369cfcd88ef42d19c20e.ctex::
 king_active.png::CompressedTexture2D::5215590946370456752::1794595535::1794595535::1::::<><><>0<>0<>c745ffd7eb8f8ee74a467692118c7d5f<>res://.godot/imported/king_active.png-e5da3e24386e997ea76c62ca951b9d6a.ctex::
 king_idle.png::CompressedTexture2D::7467311455669214295::1794595535::1794595535::1::::<><><>0<>0<>c88f45b9bd7c76e663be8ca9fb99ea92<>res://.godot/imported/king_idle.png-3b71244d8a1e242e8c5a12333a4dc3ee.ctex::
 ::res://assets/videos/::1794595535
 Kamen-Rider-Ryuki-Opening-Theme-Song-2002.ogv::VideoStreamTheora::8911597485261454537::1794595535::0::1::::<><><>0<>0<><>::
 VID-20251203-WA0036 (1).ogv::VideoStreamTheora::6521186846443252189::1794595535::0::1::::<><><>0<>0<><>::
-::res://Scenes/::1795527122
+::res://Scenes/::1795527658
 global.tscn::PackedScene::8317313702110465287::1794620000::0::1::::<><><>0<>0<><>::uid://dt5ppc15lbc6g::::res://global.gd<>uid://b2tsw0pqd86nr::::res://assets/audios/steps.mp3
 mute_button.gd::GDScript::7231454304923755418::1794595535::0::1::::<>TextureButton<><>0<>0<><>::
 mute_button.tscn::PackedScene::5560749476828701345::1794595535::0::1::::<><><>0<>0<><>::uid://dba784h2qc05k::::res://Scenes/mute_button.gd<>uid://ic88l4p76ys::::res://assets/Lucid V1.2/SVG/Shadow/Speaker-0.svg<>uid://do0dad1x21dhh::::res://assets/Lucid V1.2/SVG/Shadow/Speaker-Crossed.svg
 quiz.gdshader::Shader::8601516550364314748::1794595535::0::1::::<><><>0<>0<><>::
 quiz.tscn::PackedScene::3036999833627659276::1795526343::0::1::::<><><>0<>0<><>::uid://bvwmn3obju3kr::::res://Scripts/quiz.gd<>uid://dusvyrl0r2h53::::res://Scenes/quiz.gdshader<>uid://cgkqayev3aop1::::res://assets/NPCs/king_active.png<>uid://brm1u78wvt566::::res://Scripts/questões.gd<>uid://dsc44csnt3xex::::res://assets/BG/quiz_bg3.png<>uid://bpn2unib34sxp::::res://assets/fontes/pixel_operator/PixelOperator.ttf<>uid://c2eefbhm14asl::::res://assets/fontes/pixel_operator/PixelOperator-Bold.ttf<>uid://cqyvmckj0okc8::::res://assets/choice-button-neutral.png<>uid://blpwqbnsglgcy::::res://assets/choice-button-act.png<>uid://bhdjb8m4y2n63::::res://assets/fontes/pixel_operator/PixelOperatorHB.ttf<>uid://cngq3okm4cpvp::::res://assets/Lucid V1.2/SVG/Shadow/Exit.svg<>uid://clhwy4s25q58h::::res://Scenes/mute_button.tscn<>uid://bcypcan63k1to::::res://Scenes/adapted_scenes/adapt.tscn
 quiz_end.gdshader::Shader::6979172408287537425::1794595535::0::1::::<><><>0<>0<><>::
-quiz_end.tscn::PackedScene::9151988417930498813::1795527122::0::1::::<><><>0<>0<><>::uid://cpvpdtlbe5ahk::::res://assets/BG/victoryBG.png<>uid://dn6o7sogyepr0::::res://Scripts/quiz_end.gd<>uid://c6o07kcwn8o7b::::res://Scenes/quiz_end.gdshader<>uid://7unj3e3o3sgm::::res://assets/fontes/pixel_operator/PixelOperator8-Bold.ttf<>uid://di0athyrg3j2v::::res://assets/NPCs/KING-WIN.png<>uid://d2thbakf2hu5y::::res://assets/fontes/pixel_operator/PixelOperator8.ttf<>uid://bcypcan63k1to::::res://Scenes/adapted_scenes/adapt.tscn
+quiz_end.tscn::PackedScene::9151988417930498813::1795527658::0::1::::<><><>0<>0<><>::uid://cpvpdtlbe5ahk::::res://assets/BG/victoryBG.png<>uid://dn6o7sogyepr0::::res://Scripts/quiz_end.gd<>uid://c6o07kcwn8o7b::::res://Scenes/quiz_end.gdshader<>uid://7unj3e3o3sgm::::res://assets/fontes/pixel_operator/PixelOperator8-Bold.ttf<>uid://di0athyrg3j2v::::res://assets/NPCs/KING-WIN.png<>uid://d2thbakf2hu5y::::res://assets/fontes/pixel_operator/PixelOperator8.ttf<>uid://bcypcan63k1to::::res://Scenes/adapted_scenes/adapt.tscn
 sala_d_1.tscn::PackedScene::8489290177509489936::1795524110::0::1::::<><><>0<>0<><>::uid://b2prftfe5brsg::::res://Scripts/sala_d_1.gd<>uid://b3agg3bm77wy::::res://assets/cenários/Direita 1.png<>uid://7a2tu1areig6::::res://assets/pilar.png<>uid://cc877gkgnybrh::::res://assets/audio_icon.png<>uid://clhwy4s25q58h::::res://Scenes/mute_button.tscn<>uid://cbaove4n8biym::::res://assets/audios/sala 4.ogg<>uid://bcypcan63k1to::::res://Scenes/adapted_scenes/adapt.tscn<>uid://dc6ue54crlyke::::res://assets/audios/cue.mp3
 sala_d_2.tscn::PackedScene::2734530077778564673::1795524511::0::1::::<><><>0<>0<><>::uid://bdtn4cddc0lig::::res://Scripts/sala_d_2.gd<>uid://cjblp3moy5661::::res://assets/cenários/Direita 2.png<>uid://cc877gkgnybrh::::res://assets/audio_icon.png<>uid://ddx2gi8jwawvp::::res://assets/anim_trad_placeholder.png<>uid://clhwy4s25q58h::::res://Scenes/mute_button.tscn<>uid://7a2tu1areig6::::res://assets/pilar.png<>uid://cg8o35xdor2ii::::res://assets/quadro_peq.png<>uid://cx244nbi7a6e6::::res://assets/cgi_ref_placeholder.jpg<>uid://dvs3uixucuqnn::::res://assets/audios/sala 3 .2.ogg<>uid://cjtacucpeckyj::::res://assets/audios/sala 3 .4.ogg<>uid://bcypcan63k1to::::res://Scenes/adapted_scenes/adapt.tscn<>uid://dc6ue54crlyke::::res://assets/audios/cue.mp3
 sala_e_1.tscn::PackedScene::1559475431537416183::1795523703::0::1::::<><><>0<>0<><>::uid://dctmmyvmvyhyu::::res://Scripts/sala_e_1.gd<>uid://dttckb6i2brkt::::res://assets/cenários/Esquerda 1.png<>uid://clhwy4s25q58h::::res://Scenes/mute_button.tscn<>uid://bcypcan63k1to::::res://Scenes/adapted_scenes/adapt.tscn<>uid://dc6ue54crlyke::::res://assets/audios/cue.mp3
@@ -316,15 +318,15 @@ sala_quiz.tscn::PackedScene::6173113447280098537::1795525969::0::1::::<><><>0<>0
 soundtrack.tscn::PackedScene::8675645779088271037::1794595535::0::1::::<><><>0<>0<><>::uid://c7361qhfp0rsk::::res://Scripts/soundtrack.gd<>uid://1y0pmc32rahl::::res://assets/audios/Museu.ogg<>uid://c05cs483hq1uh::::res://assets/audios/accept.mp3<>uid://xm6btb157jmr::::res://assets/audios/denied.mp3
 textbox.tscn::PackedScene::3826853877343783604::1794595535::0::1::::<><><>0<>0<><>::uid://cqfpxpj3wuit::::res://Scripts/textbox.gd<>uid://bpn2unib34sxp::::res://assets/fontes/pixel_operator/PixelOperator.ttf
 title.tscn::PackedScene::3038578750808375605::1795525059::0::1::::<><><>0<>0<><>::uid://bofedwy68c25e::::res://Scripts/title.gd<>uid://ga4cq67baui8::::res://assets/cenários/title_PH.jpg<>uid://d2thbakf2hu5y::::res://assets/fontes/pixel_operator/PixelOperator8.ttf<>uid://bx2o80o7j5g7f::::res://assets/cenários/PALCIODOCONHECIMENTO-PALCIODOCONHECIMENTO-PALCIODO.png<>uid://d2nst5woyg6wf::::res://assets/audios/main_menu_TTS.mp3
-::res://Scenes/adapted_scenes/::1795190593
+::res://Scenes/adapted_scenes/::1795527830
 adapt.tscn::PackedScene::2577257785074703916::1794619730::0::1::::<><><>0<>0<><>::uid://kcis4bneeonu::::res://Scripts/adapt_script.gd
-tutorial.tscn::PackedScene::2065813251425091633::1795190593::0::1::::<><><>0<>0<><>::uid://k1fabtoq37jf::::res://Scripts/tutorial_script.gd<>uid://c6kpyloqq6vc3::::res://assets/audios/intro/outro_TTS.mp3<>uid://bjhkk06knscbq::::res://assets/audios/intro/intro(new).mp3<>uid://bp8cnj3r8qfc7::::res://assets/audios/intro/controls_TTS.mp3<>uid://b2tfjcdetr2nf::::res://assets/audios/intro/confirm_TTS.mp3<>uid://c05cs483hq1uh::::res://assets/audios/accept.mp3
-::res://Scripts/::1795525965
+tutorial.tscn::PackedScene::2065813251425091633::1795527830::0::1::::<><><>0<>0<><>::uid://k1fabtoq37jf::::res://Scripts/tutorial_script.gd<>uid://c6kpyloqq6vc3::::res://assets/audios/intro/outro_TTS.mp3<>uid://bjhkk06knscbq::::res://assets/audios/intro/intro(new).mp3<>uid://bp8cnj3r8qfc7::::res://assets/audios/intro/controls_TTS.mp3<>uid://b2tfjcdetr2nf::::res://assets/audios/intro/confirm_TTS.mp3<>uid://c05cs483hq1uh::::res://assets/audios/accept.mp3
+::res://Scripts/::1795527814
 about.gd::GDScript::330522280265203880::1794595535::0::1::::<>Node2D<><>0<>0<><>::
 adapt_script.gd::GDScript::706536597439001542::1795109952::0::1::::<>Node<><>0<>0<><>::
 questões.gd::GDScript::3606019649032570141::1794595535::0::1::::<>Node<><>0<>0<><>::
 quiz.gd::GDScript::3906556022254404517::1795525965::0::1::::<>Node2D<><>0<>0<><>::
-quiz_end.gd::GDScript::8136620879405688567::1794595535::0::1::::<>Node2D<><>0<>0<><>::
+quiz_end.gd::GDScript::8136620879405688567::1795527656::0::1::::<>Node2D<><>0<>0<><>::
 sala_d_1.gd::GDScript::4313527251966992598::1794619434::0::1::::<>Node2D<><>0<>0<><>::
 sala_d_2.gd::GDScript::2637051610684628042::1795524412::0::1::::<>Node2D<><>0<>0<><>::
 sala_e_1.gd::GDScript::7339614242698096560::1795523704::0::1::::<>Node2D<><>0<>0<><>::
@@ -334,4 +336,4 @@ sala_quiz.gd::GDScript::9066766472390481287::1795525359::0::1::::<>Node2D<><>0<>
 soundtrack.gd::GDScript::7078616449769658058::1794595535::0::1::::<>Node<><>0<>0<><>::
 textbox.gd::GDScript::173739334869770819::1794595535::0::1::::<>CanvasLayer<><>0<>0<><>::
 title.gd::GDScript::3379635802790351084::1795525301::0::1::::<>Node2D<><>0<>0<><>::
-tutorial_script.gd::GDScript::755865925482959511::1794615604::0::1::::<>Node2D<><>0<>0<><>::
+tutorial_script.gd::GDScript::755865925482959511::1795527814::0::1::::<>Node2D<><>0<>0<><>::

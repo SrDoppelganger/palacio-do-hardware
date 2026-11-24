@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://dctmmyvmvyhyu" path="res://Scripts/sala_e_1.gd" id="1_ccymm"]
 [ext_resource type="Texture2D" uid="uid://dttckb6i2brkt" path="res://assets/cenários/Esquerda 1.png" id="2_3bj2o"]
+[ext_resource type="Texture2D" uid="uid://tlghp7d533jc" path="res://assets/NPCs/char1_PH.png" id="4_bsevs"]
+[ext_resource type="Texture2D" uid="uid://cnkljk7kpcj8e" path="res://assets/NPCs/char2_PH.png" id="5_w6rf5"]
+[ext_resource type="Script" uid="uid://c1khvnj6vvb73" path="res://Scripts/diag_script.gd" id="8_w6rf5"]
 [ext_resource type="PackedScene" uid="uid://clhwy4s25q58h" path="res://Scenes/mute_button.tscn" id="11_jhlwr"]
 [ext_resource type="PackedScene" uid="uid://bcypcan63k1to" path="res://Scenes/adapted_scenes/adapt.tscn" id="12_sjxtn"]
 [ext_resource type="AudioStream" uid="uid://dc6ue54crlyke" path="res://assets/audios/cue.mp3" id="13_u45et"]
@@ -67,6 +70,67 @@ _data = {
 &"enter": SubResource("Animation_sjxtn")
 }
 
+[sub_resource type="Animation" id="Animation_w6rf5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../CanvasLayer/dialogue:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../CanvasLayer/dialogue/box/text:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["blah blah blah"]
+}
+
+[sub_resource type="Animation" id="Animation_jjmmt"]
+resource_name = "test"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../CanvasLayer/dialogue:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../CanvasLayer/dialogue/box/text:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": ["[color=lightblue]Johnny Joestar[/color]:[shake] GYRO! O QUE É UMA MÁQUINA DE TURING??[/shake]", "[color=lime]Gyro[/color]: Eu não sei...isso é assustador"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_42hb7"]
+_data = {
+&"RESET": SubResource("Animation_w6rf5"),
+&"test": SubResource("Animation_jjmmt")
+}
+
 [node name="salaE1" type="Node2D" unique_id=1440806903]
 script = ExtResource("1_ccymm")
 
@@ -110,6 +174,46 @@ offset_right = -22.0
 offset_bottom = 76.0
 grow_horizontal = 0
 
+[node name="dialogue" type="CanvasLayer" parent="CanvasLayer" unique_id=461907141]
+visible = false
+
+[node name="char1" type="Sprite2D" parent="CanvasLayer/dialogue" unique_id=981390964]
+position = Vector2(256, 428.99997)
+scale = Vector2(1.14, 1.14)
+texture = ExtResource("4_bsevs")
+
+[node name="char2" type="Sprite2D" parent="CanvasLayer/dialogue" unique_id=296642614]
+position = Vector2(882.99994, 499)
+scale = Vector2(1.76, 1.76)
+texture = ExtResource("5_w6rf5")
+
+[node name="box" type="ColorRect" parent="CanvasLayer/dialogue" unique_id=1127923557]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0, 0, 0, 1)
+
+[node name="text" type="RichTextLabel" parent="CanvasLayer/dialogue/box" unique_id=1876517126]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -558.0
+offset_top = -186.0
+offset_right = 557.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "blah blah blah"
+
 [node name="Adapt" parent="." unique_id=38215414 node_paths=PackedStringArray("animation") instance=ExtResource("12_sjxtn")]
 animation = NodePath("../AnimationPlayer")
 animation_name = "enter"
@@ -133,6 +237,14 @@ position = Vector2(1144, 327)
 stream = ExtResource("13_u45et")
 max_distance = 800.0
 
+[node name="Interaction" type="Node" parent="." unique_id=89881712 node_paths=PackedStringArray("dialogue_animation")]
+script = ExtResource("8_w6rf5")
+dialogue_animation = NodePath("AnimationPlayer")
+animation_name = "test"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Interaction" unique_id=974781336]
+libraries/ = SubResource("AnimationLibrary_42hb7")
+
 [connection signal="mouse_entered" from="CanvasLayer/continuar" to="." method="_on_continuar_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/continuar" to="." method="_on_continuar_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/continuar" to="." method="_on_continuar_pressed"]
@@ -141,3 +253,4 @@ max_distance = 800.0
 [connection signal="pressed" from="CanvasLayer/voltar" to="." method="_on_voltar_pressed"]
 [connection signal="A_signal" from="Adapt" to="." method="_on_continuar_pressed"]
 [connection signal="D_signal" from="Adapt" to="." method="_on_voltar_pressed"]
+[connection signal="Interact" from="Adapt" to="Interaction" method="play_animation"]
